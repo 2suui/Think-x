@@ -229,7 +229,7 @@ function Hero() {
     >
       <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '0px', paddingBottom: '48px' }}>
         <div>
-          <SectionTag text="A new way to think." style={{ marginBottom: '8px' }} />
+          <SectionTag text="A new way to think." style={{ marginBottom: '24px' }} />
         </div>
         <h1
           style={{
