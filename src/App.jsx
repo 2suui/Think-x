@@ -59,37 +59,39 @@ function Nav() {
           Think X
         </a>
 
-        {/* Clean nav container with lighter grey links turning black on hover */}
-        <nav className="nav-menu hidden md:flex">
-          {NAV_LINKS.map((link) => (
-            <a key={link.name} href={link.href} className="nav-link-item">
-              {link.name}
-            </a>
-          ))}
-        </nav>
-
-        <button className="mobile-menu-toggle md:hidden" onClick={() => setOpen((v) => !v)}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '22px' }}>
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                style={{
-                  height: '2px',
-                  background: 'var(--color-ink)',
-                  transition: 'transform 0.2s',
-                  transform:
-                    open && i === 0
-                      ? 'rotate(45deg) translate(4.5px,4.5px)'
-                      : open && i === 2
-                      ? 'rotate(-45deg) translate(4.5px,-4.5px)'
-                      : open && i === 1
-                      ? 'scaleX(0)'
-                      : 'none',
-                }}
-              />
+        {/* Right group: Nav links + Menu icon with direct explicit gap */}
+        <div className="nav-right-group">
+          <nav className="nav-menu hidden md:flex">
+            {NAV_LINKS.map((link) => (
+              <a key={link.name} href={link.href} className="nav-link-item">
+                {link.name}
+              </a>
             ))}
-          </div>
-        </button>
+          </nav>
+
+          <button className="mobile-menu-toggle" onClick={() => setOpen((v) => !v)} aria-label="Menu">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '22px' }}>
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  style={{
+                    height: '2px',
+                    background: 'var(--color-ink)',
+                    transition: 'transform 0.2s',
+                    transform:
+                      open && i === 0
+                        ? 'rotate(45deg) translate(4.5px,4.5px)'
+                        : open && i === 2
+                        ? 'rotate(-45deg) translate(4.5px,-4.5px)'
+                        : open && i === 1
+                        ? 'scaleX(0)'
+                        : 'none',
+                  }}
+                />
+              ))}
+            </div>
+          </button>
+        </div>
       </div>
 
       {open && (
