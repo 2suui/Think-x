@@ -306,31 +306,6 @@ function Hero() {
           alt="Think X notebook open on a clean desk"
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
         />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '32px',
-            right: '32px',
-            background: 'rgba(255,255,255,0.92)',
-            padding: '14px 20px',
-            backdropFilter: 'blur(4px)',
-            border: '1px solid var(--color-rule)',
-          }}
-        >
-          <p
-            style={{
-              fontFamily: '"A2Z", Arial, sans-serif',
-              fontStyle: 'italic',
-              fontWeight: 600,
-              fontSize: '0.9rem',
-              color: 'var(--color-ink)',
-              margin: 0,
-              letterSpacing: '0.01em',
-            }}
-          >
-            Think X — 2026 Edition
-          </p>
-        </div>
       </div>
 
       <style>{`.hero-grid { @media (max-width: 768px) { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; } }`}</style>
