@@ -51,7 +51,7 @@ const SectionTag = ({ text, style = {} }) => (
       fontSize: '0.8rem',
       letterSpacing: '0.02em',
       textTransform: 'uppercase',
-      marginBottom: '16px',
+      marginBottom: '24px',
       lineHeight: '1.3',
       ...style,
     }}
@@ -227,19 +227,19 @@ function Hero() {
       }}
       className="hero-grid"
     >
-      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '40px', paddingBottom: '40px' }}>
+      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '48px', paddingBottom: '48px' }}>
         <div>
-          <SectionTag text="A new way to think." />
+          <SectionTag text="A new way to think." style={{ marginBottom: '28px' }} />
         </div>
         <h1
           style={{
             fontFamily: '"A2Z", Arial, sans-serif',
             fontWeight: 700,
             fontSize: 'clamp(2.5rem, 4.8vw, 4.4rem)',
-            lineHeight: 1.15,
+            lineHeight: 1.18,
             letterSpacing: '0em',
             color: 'var(--color-ink)',
-            marginBottom: '24px',
+            marginBottom: '36px',
           }}
         >
           Don't just record.
@@ -248,11 +248,11 @@ function Hero() {
         </h1>
         <p
           style={{
-            fontSize: '1.05rem',
-            lineHeight: 1.75,
+            fontSize: '1.08rem',
+            lineHeight: 1.8,
             color: 'var(--color-ink-secondary)',
-            maxWidth: '500px',
-            marginBottom: '40px',
+            maxWidth: '520px',
+            marginBottom: '56px',
             fontWeight: 500,
             fontFamily: '"A2Z", Arial, sans-serif',
             letterSpacing: '0.01em',
@@ -260,14 +260,14 @@ function Hero() {
         >
           Think X is a notebook system designed to help you capture, organize, and rediscover your thoughts—turning notes into meaningful understanding.
         </p>
-        <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
           <a
             href="#why"
             style={{
               display: 'inline-block',
               background: 'var(--color-ink)',
               color: '#fff',
-              padding: '14px 32px',
+              padding: '16px 36px',
               fontSize: '0.875rem',
               fontWeight: 600,
               letterSpacing: '0.02em',
@@ -286,7 +286,7 @@ function Hero() {
             style={{
               display: 'inline-block',
               color: 'var(--color-ink)',
-              padding: '14px 0',
+              padding: '16px 0',
               fontSize: '0.875rem',
               fontWeight: 600,
               letterSpacing: '0.02em',
