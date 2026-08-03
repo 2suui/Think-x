@@ -118,9 +118,9 @@ function Hero() {
           <SectionTag text="A new way to think." style={{ marginBottom: '48px' }} />
         </div>
         <h1 className="hero-title">
-          Don't just record.
+          Don't Just Think.
           <br />
-          <span>Understand.</span>
+          <span>Start Making.</span>
         </h1>
         <p className="hero-desc">
           Think X is a notebook system designed to help you capture, organize, and rediscover your thoughts—turning notes into meaningful understanding.
