@@ -37,22 +37,22 @@ const RULE = () => (
   <div style={{ height: '1.5px', background: 'var(--color-rule)', width: '100%' }} />
 );
 
-// Sleek Highlighter-style Compact Yellow Tag Component with tight letter-spacing
+// Shorter, sleeker Highlighter-style Compact Yellow Tag Component
 const SectionTag = ({ text, style = {} }) => (
   <span
     style={{
       display: 'inline-block',
       background: 'var(--color-brand-yellow)',
       color: 'var(--color-ink)',
-      padding: '3px 9px',
+      padding: '2px 7px',
       borderRadius: '2px',
       fontFamily: '"A2Z", Arial, sans-serif',
       fontWeight: 700,
-      fontSize: '0.85rem',
-      letterSpacing: '-0.01em',
+      fontSize: '0.8rem',
+      letterSpacing: '0.02em',
       textTransform: 'uppercase',
-      marginBottom: '18px',
-      lineHeight: '1.25',
+      marginBottom: '16px',
+      lineHeight: '1.2',
       ...style,
     }}
   >
@@ -102,7 +102,7 @@ function Nav() {
               fontWeight: 700,
               fontSize: '1.5rem',
               color: 'var(--color-ink)',
-              letterSpacing: '-0.01em',
+              letterSpacing: '0.01em',
             }}
           >
             Think X
@@ -125,7 +125,7 @@ function Nav() {
                 fontSize: '0.875rem',
                 color: 'var(--color-ink)',
                 textDecoration: 'none',
-                letterSpacing: '-0.01em',
+                letterSpacing: '0.01em',
                 fontWeight: 600,
                 fontFamily: '"A2Z", Arial, sans-serif',
                 padding: '8px 18px',
@@ -193,7 +193,7 @@ function Nav() {
                   color: 'var(--color-ink)',
                   textDecoration: 'none',
                   fontFamily: '"A2Z", Arial, sans-serif',
-                  letterSpacing: '-0.01em',
+                  letterSpacing: '0.01em',
                   display: 'block',
                   padding: '6px 12px',
                   borderRadius: '16px',
@@ -237,7 +237,7 @@ function Hero() {
             fontWeight: 700,
             fontSize: 'clamp(2.5rem, 4.8vw, 4.4rem)',
             lineHeight: 1.15,
-            letterSpacing: '-0.025em',
+            letterSpacing: '0em',
             color: 'var(--color-ink)',
             marginBottom: '24px',
           }}
@@ -255,7 +255,7 @@ function Hero() {
             marginBottom: '40px',
             fontWeight: 500,
             fontFamily: '"A2Z", Arial, sans-serif',
-            letterSpacing: '-0.01em',
+            letterSpacing: '0.01em',
           }}
         >
           Think X is a notebook system designed to help you capture, organize, and rediscover your thoughts—turning notes into meaningful understanding.
@@ -270,7 +270,7 @@ function Hero() {
               padding: '14px 32px',
               fontSize: '0.875rem',
               fontWeight: 600,
-              letterSpacing: '0.01em',
+              letterSpacing: '0.02em',
               textDecoration: 'none',
               borderRadius: '2px',
               fontFamily: '"A2Z", Arial, sans-serif',
@@ -289,7 +289,7 @@ function Hero() {
               padding: '14px 0',
               fontSize: '0.875rem',
               fontWeight: 600,
-              letterSpacing: '0.01em',
+              letterSpacing: '0.02em',
               textDecoration: 'none',
               fontFamily: '"A2Z", Arial, sans-serif',
               borderBottom: '2px solid var(--color-ink)',
@@ -325,7 +325,7 @@ function Hero() {
               fontSize: '0.9rem',
               color: 'var(--color-ink)',
               margin: 0,
-              letterSpacing: '-0.01em',
+              letterSpacing: '0.01em',
             }}
           >
             Think X — 2026 Edition
@@ -364,14 +364,14 @@ function WhyThinkX() {
             color: 'var(--color-ink)',
             maxWidth: '700px',
             marginBottom: '24px',
-            letterSpacing: '-0.02em',
+            letterSpacing: '0em',
           }}
         >
           We take countless notes.
           <br />
           But <em style={{ fontStyle: 'italic', fontWeight: 700, fontFamily: '"A2Z", Arial, sans-serif' }}>most are never read again.</em>
         </h2>
-        <p style={{ fontSize: '1rem', color: 'var(--color-ink-secondary)', maxWidth: '520px', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '-0.01em' }}>
+        <p style={{ fontSize: '1rem', color: 'var(--color-ink-secondary)', maxWidth: '520px', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
           Think X is designed for the gap between capturing and understanding — a system that brings you back to what you wrote, and makes it mean something.
         </p>
       </div>
@@ -402,7 +402,7 @@ function WhyThinkX() {
                 fontWeight: 700,
               }}
             >
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-ink)', letterSpacing: '-0.01em' }}>
+              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-ink)', letterSpacing: '0.01em' }}>
                 0{i + 1}
               </span>
             </div>
@@ -413,12 +413,12 @@ function WhyThinkX() {
                 fontSize: '1.35rem',
                 color: 'var(--color-ink)',
                 margin: 0,
-                letterSpacing: '-0.02em',
+                letterSpacing: '0em',
               }}
             >
               {r.label}
             </h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, margin: 0, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '-0.01em' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, margin: 0, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
               {r.desc}
             </p>
           </div>
@@ -476,12 +476,12 @@ function Philosophy() {
               color: 'var(--color-ink)',
               maxWidth: '680px',
               margin: '0 auto 24px',
-              letterSpacing: '-0.02em',
+              letterSpacing: '0em',
             }}
           >
             Think X designs the <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>way you meet your thoughts again</em> — not just the way you record them.
           </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-secondary)', letterSpacing: '-0.01em', fontStyle: 'italic', fontWeight: 600, fontFamily: '"A2Z", Arial, sans-serif' }}>
+          <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-secondary)', letterSpacing: '0.01em', fontStyle: 'italic', fontWeight: 600, fontFamily: '"A2Z", Arial, sans-serif' }}>
             Think X는 기록의 방식이 아닌, 생각과 다시 만나는 방식을 디자인합니다.
           </p>
         </div>
@@ -510,10 +510,10 @@ function Philosophy() {
                   {p.title[0]}
                 </span>
               </div>
-              <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '12px', letterSpacing: '-0.02em' }}>
+              <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '12px', letterSpacing: '0em' }}>
                 {p.title}
               </h3>
-              <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '-0.01em' }}>
+              <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
                 {p.body}
               </p>
             </div>
@@ -552,7 +552,7 @@ function HowItWorks() {
         <div>
           <SectionTag text="How it Works" />
         </div>
-        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '-0.02em' }}>
+        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
           Three stages.
           <br />
           <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>One continuous loop.</em>
@@ -575,24 +575,24 @@ function HowItWorks() {
                 style={{
                   fontFamily: '"A2Z", Arial, sans-serif',
                   fontWeight: 700,
-                  fontSize: '0.85rem',
+                  fontSize: '0.8rem',
                   background: 'var(--color-brand-yellow)',
                   color: 'var(--color-ink)',
-                  padding: '2px 8px',
+                  padding: '2px 7px',
                   borderRadius: '2px',
                   marginTop: '4px',
                   minWidth: '28px',
                   textAlign: 'center',
-                  letterSpacing: '-0.01em',
+                  letterSpacing: '0.01em',
                 }}
               >
                 {s.num}
               </span>
               <div>
-                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--color-ink)', marginBottom: '10px', letterSpacing: '-0.02em' }}>
+                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--color-ink)', marginBottom: '10px', letterSpacing: '0em' }}>
                   {s.title}
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '-0.01em' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
                   {s.body}
                 </p>
               </div>
@@ -621,7 +621,7 @@ function ProductFeatures() {
           <div>
             <SectionTag text="Product Features" />
           </div>
-          <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '-0.02em' }}>
+          <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
             Built around
             <br />
             <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>how thought actually works.</em>
@@ -656,10 +656,10 @@ function ProductFeatures() {
               >
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--color-brand-yellow)', marginTop: '8px', flexShrink: 0 }} />
                 <div>
-                  <h4 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.15rem', color: 'var(--color-ink)', marginBottom: '6px', letterSpacing: '-0.02em' }}>
+                  <h4 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.15rem', color: 'var(--color-ink)', marginBottom: '6px', letterSpacing: '0em' }}>
                     {f.label}
                   </h4>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', fontWeight: 500, margin: 0, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '-0.01em' }}>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', fontWeight: 500, margin: 0, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
                     {f.desc}
                   </p>
                 </div>
@@ -681,7 +681,7 @@ function ProductDetail() {
         <div>
           <SectionTag text="Product Detail" />
         </div>
-        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '-0.02em' }}>
+        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
           Inside the pages.
         </h2>
       </div>
@@ -695,10 +695,10 @@ function ProductDetail() {
           />
         </div>
         <div>
-          <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.85rem', color: 'var(--color-ink)', marginBottom: '8px', letterSpacing: '-0.02em' }}>
+          <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.85rem', color: 'var(--color-ink)', marginBottom: '8px', letterSpacing: '0em' }}>
             Inside Pages
           </h3>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '1.05rem', fontWeight: 600, color: 'var(--color-ink-secondary)', marginBottom: '40px', letterSpacing: '-0.01em' }}>
+          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '1.05rem', fontWeight: 600, color: 'var(--color-ink-secondary)', marginBottom: '40px', letterSpacing: '0.01em' }}>
             내지 확대컷
           </p>
           <RULE />
@@ -708,19 +708,19 @@ function ProductDetail() {
                 style={{
                   fontFamily: '"A2Z", Arial, sans-serif',
                   fontWeight: 700,
-                  fontSize: '0.85rem',
+                  fontSize: '0.8rem',
                   background: 'var(--color-brand-yellow)',
                   color: 'var(--color-ink)',
-                  padding: '2px 8px',
+                  padding: '2px 7px',
                   borderRadius: '2px',
                   minWidth: '28px',
                   textAlign: 'center',
-                  letterSpacing: '-0.01em',
+                  letterSpacing: '0.01em',
                 }}
               >
                 0{i + 1}
               </span>
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 600, fontSize: '1.2rem', color: 'var(--color-ink)', letterSpacing: '-0.01em' }}>{item}</span>
+              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 600, fontSize: '1.2rem', color: 'var(--color-ink)', letterSpacing: '0.01em' }}>{item}</span>
               <span style={{ marginLeft: 'auto', color: 'var(--color-ink-secondary)', fontSize: '1.3rem', fontWeight: 700 }}>→</span>
             </div>
           ))}
@@ -760,7 +760,7 @@ function UseCases() {
           <div>
             <SectionTag text="Use Cases" />
           </div>
-          <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '-0.02em' }}>
+          <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
             One system.
             <br />
             <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>Many kinds of thinking.</em>
@@ -787,19 +787,19 @@ function UseCases() {
                     fontWeight: 700,
                     background: 'var(--color-brand-yellow)',
                     color: 'var(--color-ink)',
-                    padding: '3px 8px',
+                    padding: '2px 7px',
                     borderRadius: '2px',
                     textTransform: 'uppercase',
-                    letterSpacing: '-0.01em',
+                    letterSpacing: '0.01em',
                     display: 'inline-block',
                   }}
                 >
                   {c.tag}
                 </span>
-                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', color: 'var(--color-ink)', margin: '12px 0 14px', letterSpacing: '-0.02em' }}>
+                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', color: 'var(--color-ink)', margin: '12px 0 14px', letterSpacing: '0em' }}>
                   {c.title}
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '-0.01em' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
                   {c.body}
                 </p>
               </div>
@@ -820,7 +820,7 @@ function DemoVideo() {
         <div>
           <SectionTag text="Demo Video" />
         </div>
-        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '-0.02em' }}>
+        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
           See Think X <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>in use.</em>
         </h2>
       </div>
@@ -904,8 +904,8 @@ function Footer() {
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: 'clamp(48px,8vw,96px) clamp(24px,5vw,120px)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '48px', marginBottom: '80px' }}>
           <div>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.6rem', letterSpacing: '-0.01em', color: '#fff', margin: '0 0 12px' }}>Think X</p>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 500, fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: 0, letterSpacing: '-0.01em' }}>
+            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.6rem', letterSpacing: '0.01em', color: '#fff', margin: '0 0 12px' }}>Think X</p>
+            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 500, fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: 0, letterSpacing: '0.01em' }}>
               Designed for thoughtful note-taking.
             </p>
           </div>
@@ -920,7 +920,7 @@ function Footer() {
                   fontWeight: 500,
                   color: 'rgba(255,255,255,0.7)',
                   textDecoration: 'none',
-                  letterSpacing: '-0.01em',
+                  letterSpacing: '0.01em',
                   transition: 'color 0.2s',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
@@ -933,8 +933,8 @@ function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '28px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '-0.01em' }}>© 2026 Think X.</p>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '-0.01em' }}>Graduation Project by Suyeon Lee.</p>
+          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>© 2026 Think X.</p>
+          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>Graduation Project by Suyeon Lee.</p>
         </div>
       </div>
     </footer>
