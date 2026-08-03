@@ -227,7 +227,7 @@ function Hero() {
       }}
       className="hero-grid"
     >
-      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '0px', paddingBottom: '48px' }}>
+      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '68px', paddingBottom: '48px' }}>
         <div>
           <SectionTag text="A new way to think." style={{ marginBottom: '48px' }} />
         </div>
