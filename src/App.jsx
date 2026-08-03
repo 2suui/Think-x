@@ -33,29 +33,11 @@ const NAV_LINKS = [
   { name: 'How to use', href: '#how-it-works' },
 ];
 
-const RULE = () => (
-  <div style={{ height: '1.5px', background: 'var(--color-rule)', width: '100%' }} />
-);
+const RULE = () => <div className="rule-divider" />;
 
-// Vertically padded, sleek Highlighter-style Yellow Tag Component
+// Yellow Highlighter Section Tag Component
 const SectionTag = ({ text, style = {} }) => (
-  <span
-    style={{
-      display: 'inline-block',
-      background: 'var(--color-brand-yellow)',
-      color: 'var(--color-ink)',
-      padding: '5px 10px',
-      borderRadius: '2px',
-      fontFamily: '"A2Z", Arial, sans-serif',
-      fontWeight: 700,
-      fontSize: '0.8rem',
-      letterSpacing: '0.02em',
-      textTransform: 'uppercase',
-      marginBottom: '16px',
-      lineHeight: '1.3',
-      ...style,
-    }}
-  >
+  <span className="section-tag-yellow" style={style}>
     {text}
   </span>
 );
@@ -71,92 +53,22 @@ function Nav() {
   }, []);
 
   return (
-    <header
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        background: scrolled ? 'rgba(255,255,255,0.96)' : '#ffffff',
-        backdropFilter: scrolled ? 'blur(8px)' : 'none',
-        borderBottom: `1px solid ${scrolled ? 'var(--color-rule)' : 'transparent'}`,
-        transition: 'border-color 0.3s, backdrop-filter 0.3s',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '1280px',
-          margin: '0 auto',
-          padding: '0 40px',
-          height: '76px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline' }}>
-          <span
-            style={{
-              fontFamily: '"A2Z", Arial, sans-serif',
-              fontWeight: 700,
-              fontSize: '1.65rem',
-              color: 'var(--color-ink)',
-              letterSpacing: '0.01em',
-            }}
-          >
-            Think X
-          </span>
+    <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
+      <div className="header-container">
+        <a href="#" className="nav-brand-logo">
+          Think X
         </a>
 
-        {/* Clean nav container with lighter grey links turning black on hover + subtle #f0d41f glow */}
-        <nav
-          className="hidden md:flex"
-          style={{
-            gap: '8px',
-            alignItems: 'center',
-          }}
-        >
+        {/* Clean nav container with lighter grey links turning black on hover */}
+        <nav className="nav-menu hidden md:flex">
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              style={{
-                fontSize: '0.875rem',
-                color: '#777777',
-                textDecoration: 'none',
-                letterSpacing: '0.01em',
-                fontWeight: 600,
-                fontFamily: '"A2Z", Arial, sans-serif',
-                padding: '8px 18px',
-                borderRadius: '24px',
-                border: '1px solid transparent',
-                transition: 'all 0.25s ease',
-                display: 'inline-block',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = 'var(--color-ink)';
-                e.currentTarget.style.borderColor = 'rgba(240, 212, 31, 0.55)';
-                e.currentTarget.style.boxShadow = '0 0 8px rgba(240, 212, 31, 0.25)';
-                e.currentTarget.style.background = '#ffffff';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#777777';
-                e.currentTarget.style.borderColor = 'transparent';
-                e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.background = 'transparent';
-              }}
-            >
+            <a key={link.name} href={link.href} className="nav-link-item">
               {link.name}
             </a>
           ))}
         </nav>
 
-        <button
-          className="md:hidden"
-          onClick={() => setOpen((v) => !v)}
-          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '8px', color: 'var(--color-ink)' }}
-        >
+        <button className="mobile-menu-toggle md:hidden" onClick={() => setOpen((v) => !v)}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '22px' }}>
             {[0, 1, 2].map((i) => (
               <div
@@ -181,24 +93,10 @@ function Nav() {
       </div>
 
       {open && (
-        <div style={{ borderTop: '1px solid var(--color-rule)', background: '#fff', padding: '16px 40px 24px' }}>
+        <div className="mobile-menu-drawer">
           {NAV_LINKS.map((l) => (
-            <div key={l.name} style={{ padding: '10px 0', borderBottom: '1px solid var(--color-rule)' }}>
-              <a
-                href={l.href}
-                onClick={() => setOpen(false)}
-                style={{
-                  fontSize: '0.95rem',
-                  fontWeight: 600,
-                  color: '#777777',
-                  textDecoration: 'none',
-                  fontFamily: '"A2Z", Arial, sans-serif',
-                  letterSpacing: '0.01em',
-                  display: 'block',
-                  padding: '6px 12px',
-                  borderRadius: '16px',
-                }}
-              >
+            <div key={l.name}>
+              <a href={l.href} onClick={() => setOpen(false)} className="mobile-menu-link">
                 {l.name}
               </a>
             </div>
@@ -212,104 +110,36 @@ function Nav() {
 function Hero() {
   const textRef = useFadeIn();
   return (
-    <section
-      style={{
-        paddingTop: '76px',
-        minHeight: 'calc(100vh - 76px)',
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        alignItems: 'center',
-        maxWidth: '1280px',
-        margin: '0 auto',
-        paddingLeft: '40px',
-        paddingRight: '40px',
-        overflow: 'hidden',
-      }}
-      className="hero-grid"
-    >
-      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '68px', paddingBottom: '48px' }}>
+    <section className="hero-section hero-grid">
+      <div ref={textRef} className="hero-text-col fade-in">
         <div>
           <SectionTag text="A new way to think." style={{ marginBottom: '48px' }} />
         </div>
-        <h1
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontWeight: 700,
-            fontSize: 'clamp(2.5rem, 4.8vw, 4.4rem)',
-            lineHeight: 1.28,
-            letterSpacing: '0em',
-            color: 'var(--color-ink)',
-            marginBottom: '64px',
-            marginTop: '0px',
-          }}
-        >
+        <h1 className="hero-title">
           Don't just record.
           <br />
-          <span style={{ fontStyle: 'normal', fontWeight: 700, fontFamily: '"A2Z", Arial, sans-serif' }}>Understand.</span>
+          <span>Understand.</span>
         </h1>
-        <p
-          style={{
-            fontSize: '1.08rem',
-            lineHeight: 1.8,
-            color: 'var(--color-ink-secondary)',
-            maxWidth: '520px',
-            marginBottom: '92px',
-            fontWeight: 500,
-            fontFamily: '"A2Z", Arial, sans-serif',
-            letterSpacing: '0.01em',
-          }}
-        >
+        <p className="hero-desc">
           Think X is a notebook system designed to help you capture, organize, and rediscover your thoughts—turning notes into meaningful understanding.
         </p>
-        <div style={{ display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <a
-            href="#why"
-            style={{
-              display: 'inline-block',
-              background: 'var(--color-ink)',
-              color: '#fff',
-              padding: '16px 36px',
-              fontSize: '0.875rem',
-              fontWeight: 600,
-              letterSpacing: '0.02em',
-              textDecoration: 'none',
-              borderRadius: '2px',
-              fontFamily: '"A2Z", Arial, sans-serif',
-              transition: 'background 0.2s',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-brand-blue)')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-ink)')}
-          >
+        <div className="hero-buttons">
+          <a href="#why" className="btn-primary">
             Discover Think X
           </a>
-          <a
-            href="#product"
-            style={{
-              display: 'inline-block',
-              color: 'var(--color-ink)',
-              padding: '16px 0',
-              fontSize: '0.875rem',
-              fontWeight: 600,
-              letterSpacing: '0.02em',
-              textDecoration: 'none',
-              fontFamily: '"A2Z", Arial, sans-serif',
-              borderBottom: '2px solid var(--color-ink)',
-            }}
-          >
+          <a href="#product" className="btn-link-underline">
             View the product ↓
           </a>
         </div>
       </div>
 
-      <div style={{ position: 'relative', background: 'var(--color-surface)', overflow: 'hidden', height: '100%', minHeight: '500px' }}>
+      <div className="hero-img-col">
         <img
           src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?w=960&h=1100&fit=crop&auto=format"
           alt="Think X notebook open on a clean desk"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+          className="hero-img"
         />
       </div>
-
-      <style>{`.hero-grid { @media (max-width: 768px) { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; } }`}</style>
     </section>
   );
 }
@@ -326,104 +156,45 @@ function WhyThinkX() {
   ];
 
   return (
-    <section id="why" style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
+    <section id="why" className="section-wrapper">
       <div ref={headRef} className="fade-in" style={{ marginBottom: '72px' }}>
         <div>
-          <SectionTag text="Why Think X?" />
+          <SectionTag text="Why Think X?" style={{ marginBottom: '16px' }} />
         </div>
-        <h2
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontWeight: 700,
-            fontSize: 'clamp(2rem, 3.5vw, 3.2rem)',
-            lineHeight: 1.2,
-            color: 'var(--color-ink)',
-            maxWidth: '700px',
-            marginBottom: '24px',
-            letterSpacing: '0em',
-          }}
-        >
+        <h2 className="section-heading-lg">
           We take countless notes.
           <br />
-          But <em style={{ fontStyle: 'italic', fontWeight: 700, fontFamily: '"A2Z", Arial, sans-serif' }}>most are never read again.</em>
+          <em style={{ fontStyle: 'italic', fontWeight: 700 }}>most are never read again.</em>
         </h2>
-        <p style={{ fontSize: '1rem', color: 'var(--color-ink-secondary)', maxWidth: '520px', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
+        <p className="section-subtext">
           Think X is designed for the gap between capturing and understanding — a system that brings you back to what you wrote, and makes it mean something.
         </p>
       </div>
 
       <RULE />
 
-      <div
-        ref={gridRef}
-        className="fade-in"
-        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1px', background: 'var(--color-rule)', marginTop: '0' }}
-      >
+      <div ref={gridRef} className="why-cards-grid fade-in">
         {REASONS.map((r, i) => (
-          <div
-            key={r.label}
-            className={`fade-in fade-in-delay-${i + 1}`}
-            style={{ background: '#fff', padding: '40px 32px', display: 'flex', flexDirection: 'column', gap: '16px' }}
-          >
-            <div
-              style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '2px',
-                background: 'var(--color-brand-yellow)',
-                color: 'var(--color-ink)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 700,
-              }}
-            >
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-ink)', letterSpacing: '0.01em' }}>
-                0{i + 1}
-              </span>
-            </div>
-            <h3
-              style={{
-                fontFamily: '"A2Z", Arial, sans-serif',
-                fontWeight: 700,
-                fontSize: '1.35rem',
-                color: 'var(--color-ink)',
-                margin: 0,
-                letterSpacing: '0em',
-              }}
-            >
-              {r.label}
-            </h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, margin: 0, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
-              {r.desc}
-            </p>
+          <div key={r.label} className={`why-card fade-in fade-in-delay-${i + 1}`}>
+            <div className="why-badge-num">0{i + 1}</div>
+            <h3 className="why-card-title">{r.label}</h3>
+            <p className="why-card-desc">{r.desc}</p>
           </div>
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', marginTop: '48px' }} className="gallery-grid">
+      <div className="why-gallery-grid gallery-grid">
         {[
           'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop',
           'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=300&fit=crop',
           'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&h=300&fit=crop',
           'https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&h=300&fit=crop',
         ].map((src, i) => (
-          <div key={i} style={{ aspectRatio: '4/3', overflow: 'hidden', background: 'var(--color-surface)' }}>
-            <img
-              src={src}
-              alt="Think X product visual"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.6s ease' }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-            />
+          <div key={i} className="why-gallery-item">
+            <img src={src} alt="Think X product visual" className="why-gallery-img" />
           </div>
         ))}
       </div>
-      <style>{`
-        @media (max-width: 768px) {
-          .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-      `}</style>
     </section>
   );
 }
@@ -436,60 +207,30 @@ function Philosophy() {
     { title: 'Return', body: 'A notebook you return to is more valuable than one you fill and forget.' },
     { title: 'Growth', body: 'Understanding compounds. Each entry builds on the last.' },
   ];
+
   return (
-    <section id="philosophy" style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)' }}>
+    <section id="philosophy" className="philosophy-section">
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div>
-            <SectionTag text="Philosophy" />
+            <SectionTag text="Philosophy" style={{ marginBottom: '16px' }} />
           </div>
-          <h2
-            style={{
-              fontFamily: '"A2Z", Arial, sans-serif',
-              fontWeight: 700,
-              fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
-              lineHeight: 1.25,
-              color: 'var(--color-ink)',
-              maxWidth: '680px',
-              margin: '0 auto 24px',
-              letterSpacing: '0em',
-            }}
-          >
-            Think X designs the <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>way you meet your thoughts again</em> — not just the way you record them.
+          <h2 className="section-heading-lg" style={{ margin: '0 auto 24px' }}>
+            Think X designs the <em>way you meet your thoughts again</em> — not just the way you record them.
           </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-secondary)', letterSpacing: '0.01em', fontStyle: 'italic', fontWeight: 600, fontFamily: '"A2Z", Arial, sans-serif' }}>
+          <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-secondary)', fontStyle: 'italic', fontWeight: 600 }}>
             Think X는 기록의 방식이 아닌, 생각과 다시 만나는 방식을 디자인합니다.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
+        <div className="philosophy-grid">
           {PILLARS.map((p, i) => (
-            <div
-              key={p.title}
-              className={`fade-in fade-in-delay-${i + 1}`}
-              style={{ textAlign: 'center', padding: '40px 24px', background: '#fff', borderRadius: '2px', border: '1px solid var(--color-rule)' }}
-            >
-              <div
-                style={{
-                  width: '72px',
-                  height: '72px',
-                  borderRadius: '50%',
-                  background: 'var(--color-brand-yellow)',
-                  margin: '0 auto 24px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  border: '1px solid var(--color-ink)',
-                }}
-              >
-                <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-ink)' }}>
-                  {p.title[0]}
-                </span>
-              </div>
-              <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '12px', letterSpacing: '0em' }}>
+            <div key={p.title} className={`philosophy-card fade-in fade-in-delay-${i + 1}`}>
+              <div className="philosophy-circle-badge">{p.title[0]}</div>
+              <h3 style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '12px' }}>
                 {p.title}
               </h3>
-              <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
+              <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', lineHeight: 1.7, fontWeight: 500, margin: 0 }}>
                 {p.body}
               </p>
             </div>
@@ -522,53 +263,33 @@ function HowItWorks() {
       img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=700&fit=crop',
     },
   ];
+
   return (
-    <section id="how-it-works" style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
+    <section id="how-it-works" className="section-wrapper">
       <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
         <div>
-          <SectionTag text="How it Works" />
+          <SectionTag text="How it Works" style={{ marginBottom: '16px' }} />
         </div>
-        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
+        <h2 className="section-heading-lg">
           Three stages.
           <br />
-          <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>One continuous loop.</em>
+          <em>One continuous loop.</em>
         </h2>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+
+      <div className="steps-grid">
         {STEPS.map((s, i) => (
-          <div key={s.num} className={`fade-in fade-in-delay-${i + 1}`} style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ aspectRatio: '5/6', overflow: 'hidden', background: 'var(--color-surface)', borderRadius: '2px', marginBottom: '24px' }}>
-              <img
-                src={s.img}
-                alt={s.title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.7s ease' }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-              />
+          <div key={s.num} className={`step-card fade-in fade-in-delay-${i + 1}`}>
+            <div className="step-img-box">
+              <img src={s.img} alt={s.title} className="step-img" />
             </div>
             <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-              <span
-                style={{
-                  fontFamily: '"A2Z", Arial, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '0.8rem',
-                  background: 'var(--color-brand-yellow)',
-                  color: 'var(--color-ink)',
-                  padding: '4px 8px',
-                  borderRadius: '2px',
-                  marginTop: '4px',
-                  minWidth: '28px',
-                  textAlign: 'center',
-                  letterSpacing: '0.01em',
-                }}
-              >
-                {s.num}
-              </span>
+              <span className="step-badge">{s.num}</span>
               <div>
-                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.35rem', color: 'var(--color-ink)', marginBottom: '10px', letterSpacing: '0em' }}>
+                <h3 style={{ fontWeight: 700, fontSize: '1.35rem', color: 'var(--color-ink)', marginBottom: '10px' }}>
                   {s.title}
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, margin: 0 }}>
                   {s.body}
                 </p>
               </div>
@@ -590,23 +311,24 @@ function ProductFeatures() {
     { label: 'Thread Format', desc: 'Thread-based pages encourage continued thinking' },
     { label: '90gsm Paper', desc: 'Fountain pen-friendly, ghosting-free sheets' },
   ];
+
   return (
-    <section style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) 0' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px,5vw,120px)' }}>
+    <section className="features-split-wrapper">
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px, 5vw, 120px)' }}>
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
           <div>
-            <SectionTag text="Product Features" />
+            <SectionTag text="Product Features" style={{ marginBottom: '16px' }} />
           </div>
-          <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
+          <h2 className="section-heading-lg">
             Built around
             <br />
-            <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>how thought actually works.</em>
+            <em>how thought actually works.</em>
           </h2>
         </div>
       </div>
 
-      <div style={{ position: 'relative', maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px,5vw,120px)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px', background: 'var(--color-rule)' }} className="feature-split">
+      <div style={{ position: 'relative', maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px, 5vw, 120px)' }}>
+        <div className="feature-split-grid feature-split">
           <div style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
             <img
               src="https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=800&h=720&fit=crop&auto=format"
@@ -614,28 +336,15 @@ function ProductFeatures() {
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '480px' }}
             />
           </div>
-          <div style={{ background: '#fff', padding: '0' }}>
-            {FEATURES.map((f, i) => (
-              <div
-                key={f.label}
-                style={{
-                  padding: '28px 40px',
-                  borderBottom: i < FEATURES.length - 1 ? '1px solid var(--color-rule)' : 'none',
-                  display: 'flex',
-                  gap: '20px',
-                  alignItems: 'flex-start',
-                  transition: 'background 0.2s',
-                  cursor: 'default',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-surface)')}
-                onMouseLeave={(e) => (e.currentTarget.style.background = '#fff')}
-              >
-                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--color-brand-yellow)', marginTop: '8px', flexShrink: 0 }} />
+          <div style={{ background: '#ffffff', padding: 0 }}>
+            {FEATURES.map((f) => (
+              <div key={f.label} className="feature-item-row">
+                <span className="feature-yellow-dot" />
                 <div>
-                  <h4 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.15rem', color: 'var(--color-ink)', marginBottom: '6px', letterSpacing: '0em' }}>
+                  <h4 style={{ fontWeight: 700, fontSize: '1.15rem', color: 'var(--color-ink)', marginBottom: '6px' }}>
                     {f.label}
                   </h4>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', fontWeight: 500, margin: 0, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
+                  <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', fontWeight: 500, margin: 0 }}>
                     {f.desc}
                   </p>
                 </div>
@@ -644,7 +353,6 @@ function ProductFeatures() {
           </div>
         </div>
       </div>
-      <style>{`.feature-split { @media (max-width: 768px) { grid-template-columns: 1fr; } }`}</style>
     </section>
   );
 }
@@ -652,17 +360,15 @@ function ProductFeatures() {
 function ProductDetail() {
   const ref = useFadeIn();
   return (
-    <section id="product" style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
+    <section id="product" className="section-wrapper">
       <div ref={ref} className="fade-in" style={{ marginBottom: '64px' }}>
         <div>
-          <SectionTag text="Product Detail" />
+          <SectionTag text="Product Detail" style={{ marginBottom: '16px' }} />
         </div>
-        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
-          Inside the pages.
-        </h2>
+        <h2 className="section-heading-lg">Inside the pages.</h2>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }} className="detail-grid">
+      <div className="detail-flex-grid detail-grid">
         <div style={{ background: 'var(--color-surface)', overflow: 'hidden', borderRadius: '2px' }}>
           <img
             src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=900&h=800&fit=crop&auto=format"
@@ -671,38 +377,22 @@ function ProductDetail() {
           />
         </div>
         <div>
-          <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.85rem', color: 'var(--color-ink)', marginBottom: '8px', letterSpacing: '0em' }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.85rem', color: 'var(--color-ink)', marginBottom: '8px' }}>
             Inside Pages
           </h3>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '1.05rem', fontWeight: 600, color: 'var(--color-ink-secondary)', marginBottom: '40px', letterSpacing: '0.01em' }}>
+          <p style={{ fontStyle: 'italic', fontSize: '1.05rem', fontWeight: 600, color: 'var(--color-ink-secondary)', marginBottom: '40px' }}>
             내지 확대컷
           </p>
           <RULE />
           {['Capture Page', 'Keyword Index', 'Connection Space', 'Archive Section'].map((item, i) => (
-            <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '20px 0', borderBottom: '1px solid var(--color-rule)' }}>
-              <span
-                style={{
-                  fontFamily: '"A2Z", Arial, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '0.8rem',
-                  background: 'var(--color-brand-yellow)',
-                  color: 'var(--color-ink)',
-                  padding: '4px 8px',
-                  borderRadius: '2px',
-                  minWidth: '28px',
-                  textAlign: 'center',
-                  letterSpacing: '0.01em',
-                }}
-              >
-                0{i + 1}
-              </span>
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 600, fontSize: '1.2rem', color: 'var(--color-ink)', letterSpacing: '0.01em' }}>{item}</span>
+            <div key={item} className="detail-row-item">
+              <span className="step-badge">0{i + 1}</span>
+              <span style={{ fontWeight: 600, fontSize: '1.2rem', color: 'var(--color-ink)' }}>{item}</span>
               <span style={{ marginLeft: 'auto', color: 'var(--color-ink-secondary)', fontSize: '1.3rem', fontWeight: 700 }}>→</span>
             </div>
           ))}
         </div>
       </div>
-      <style>{`.detail-grid { @media (max-width: 768px) { grid-template-columns: 1fr; gap: 40px; } }`}</style>
     </section>
   );
 }
@@ -729,53 +419,35 @@ function UseCases() {
       img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
     },
   ];
+
   return (
-    <section style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)' }}>
+    <section className="philosophy-section">
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
           <div>
-            <SectionTag text="Use Cases" />
+            <SectionTag text="Use Cases" style={{ marginBottom: '16px' }} />
           </div>
-          <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
+          <h2 className="section-heading-lg">
             One system.
             <br />
-            <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>Many kinds of thinking.</em>
+            <em>Many kinds of thinking.</em>
           </h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', background: 'var(--color-rule)' }}>
+        <div className="cases-grid">
           {CASES.map((c, i) => (
-            <div key={c.tag} className={`fade-in fade-in-delay-${i + 1}`} style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ overflow: 'hidden', aspectRatio: '3/2', background: 'var(--color-surface)' }}>
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.7s ease' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-                />
+            <div key={c.tag} className={`case-card-box fade-in fade-in-delay-${i + 1}`}>
+              <div className="case-img-box">
+                <img src={c.img} alt={c.title} className="case-img" />
               </div>
               <div style={{ padding: '32px' }}>
-                <span
-                  style={{
-                    fontFamily: '"A2Z", Arial, sans-serif',
-                    fontSize: '0.8rem',
-                    fontWeight: 700,
-                    background: 'var(--color-brand-yellow)',
-                    color: 'var(--color-ink)',
-                    padding: '4px 8px',
-                    borderRadius: '2px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.01em',
-                    display: 'inline-block',
-                  }}
-                >
+                <span className="section-tag-yellow" style={{ marginBottom: '12px' }}>
                   {c.tag}
                 </span>
-                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', color: 'var(--color-ink)', margin: '12px 0 14px', letterSpacing: '0em' }}>
+                <h3 style={{ fontWeight: 700, fontSize: '1.4rem', color: 'var(--color-ink)', margin: '12px 0 14px' }}>
                   {c.title}
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif', letterSpacing: '0.01em' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, margin: 0 }}>
                   {c.body}
                 </p>
               </div>
@@ -790,28 +462,19 @@ function UseCases() {
 function DemoVideo() {
   const ref = useFadeIn();
   const [playing, setPlaying] = useState(false);
+
   return (
-    <section style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
+    <section className="section-wrapper">
       <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '56px' }}>
         <div>
-          <SectionTag text="Demo Video" />
+          <SectionTag text="Demo Video" style={{ marginBottom: '16px' }} />
         </div>
-        <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)', letterSpacing: '0em' }}>
-          See Think X <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>in use.</em>
+        <h2 className="section-heading-lg" style={{ margin: '0 auto' }}>
+          See Think X <em>in use.</em>
         </h2>
       </div>
-      <div
-        style={{
-          position: 'relative',
-          aspectRatio: '16/9',
-          background: '#000',
-          overflow: 'hidden',
-          borderRadius: '4px',
-          maxWidth: '960px',
-          margin: '0 auto',
-          boxShadow: '0 12px 32px rgba(0,0,0,0.12)',
-        }}
-      >
+
+      <div className="video-frame-container">
         {playing ? (
           <iframe
             src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
@@ -821,10 +484,7 @@ function DemoVideo() {
             allowFullScreen
           />
         ) : (
-          <div
-            style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }}
-            onClick={() => setPlaying(true)}
-          >
+          <div style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }} onClick={() => setPlaying(true)}>
             <img
               src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&h=675&fit=crop&auto=format"
               alt="Think X notebook on a reading desk"
@@ -838,25 +498,10 @@ function DemoVideo() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 background: 'rgba(0,0,0,0.22)',
-                transition: 'background 0.2s',
               }}
             >
-              <div
-                style={{
-                  width: '72px',
-                  height: '72px',
-                  borderRadius: '50%',
-                  background: 'rgba(255,255,255,0.95)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
-                  transition: 'transform 0.2s',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-              >
-                <div style={{ width: 0, height: 0, borderTop: '12px solid transparent', borderBottom: '12px solid transparent', borderLeft: '20px solid var(--color-ink)', marginLeft: '4px' }} />
+              <div className="video-play-btn-circle">
+                <div className="video-play-triangle" />
               </div>
             </div>
           </div>
@@ -876,41 +521,27 @@ function Footer() {
   ];
 
   return (
-    <footer style={{ background: 'var(--color-ink)', color: '#fff' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '36px clamp(24px, 5vw, 120px) 28px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px', marginBottom: '24px' }}>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div className="footer-top-row">
           <div>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', letterSpacing: '0.01em', color: '#fff', margin: '0 0 4px' }}>Think X</p>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 500, fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', margin: 0, letterSpacing: '0.01em' }}>
+            <p style={{ fontWeight: 700, fontSize: '1.4rem', letterSpacing: '0.01em', color: '#fff', margin: '0 0 4px' }}>Think X</p>
+            <p style={{ fontWeight: 500, fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', margin: 0 }}>
               Designed for thoughtful note-taking.
             </p>
           </div>
-          <nav style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <nav className="footer-nav-list">
             {FOOTER_NAV.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                style={{
-                  fontFamily: '"A2Z", Arial, sans-serif',
-                  fontSize: '0.85rem',
-                  fontWeight: 500,
-                  color: 'rgba(255,255,255,0.7)',
-                  textDecoration: 'none',
-                  letterSpacing: '0.01em',
-                  transition: 'color 0.2s',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
-              >
+              <a key={l.label} href={l.href} className="footer-nav-link">
                 {l.label}
               </a>
             ))}
           </nav>
         </div>
 
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.12)', paddingTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>© 2026 Think X.</p>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>Graduation Project by Suyeon Lee.</p>
+        <div className="footer-bottom-row">
+          <p className="footer-copy-text">© 2026 Think X.</p>
+          <p className="footer-copy-text">Graduation Project by Suyeon Lee.</p>
         </div>
       </div>
     </footer>
