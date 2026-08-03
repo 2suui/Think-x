@@ -100,7 +100,7 @@ function Nav() {
             style={{
               fontFamily: '"A2Z", Arial, sans-serif',
               fontWeight: 700,
-              fontSize: '1.85rem',
+              fontSize: '1.65rem',
               color: 'var(--color-ink)',
               letterSpacing: '0.01em',
             }}
