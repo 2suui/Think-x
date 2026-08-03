@@ -37,14 +37,14 @@ const RULE = () => (
   <div style={{ height: '1.5px', background: 'var(--color-rule)', width: '100%' }} />
 );
 
-// Shorter, sleeker Highlighter-style Compact Yellow Tag Component
+// Vertically padded, sleek Highlighter-style Yellow Tag Component
 const SectionTag = ({ text, style = {} }) => (
   <span
     style={{
       display: 'inline-block',
       background: 'var(--color-brand-yellow)',
       color: 'var(--color-ink)',
-      padding: '2px 7px',
+      padding: '5px 10px',
       borderRadius: '2px',
       fontFamily: '"A2Z", Arial, sans-serif',
       fontWeight: 700,
@@ -52,7 +52,7 @@ const SectionTag = ({ text, style = {} }) => (
       letterSpacing: '0.02em',
       textTransform: 'uppercase',
       marginBottom: '16px',
-      lineHeight: '1.2',
+      lineHeight: '1.3',
       ...style,
     }}
   >
@@ -578,7 +578,7 @@ function HowItWorks() {
                   fontSize: '0.8rem',
                   background: 'var(--color-brand-yellow)',
                   color: 'var(--color-ink)',
-                  padding: '2px 7px',
+                  padding: '4px 8px',
                   borderRadius: '2px',
                   marginTop: '4px',
                   minWidth: '28px',
@@ -711,7 +711,7 @@ function ProductDetail() {
                   fontSize: '0.8rem',
                   background: 'var(--color-brand-yellow)',
                   color: 'var(--color-ink)',
-                  padding: '2px 7px',
+                  padding: '4px 8px',
                   borderRadius: '2px',
                   minWidth: '28px',
                   textAlign: 'center',
@@ -787,7 +787,7 @@ function UseCases() {
                     fontWeight: 700,
                     background: 'var(--color-brand-yellow)',
                     color: 'var(--color-ink)',
-                    padding: '2px 7px',
+                    padding: '4px 8px',
                     borderRadius: '2px',
                     textTransform: 'uppercase',
                     letterSpacing: '0.01em',
