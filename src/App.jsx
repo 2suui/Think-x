@@ -236,7 +236,7 @@ function Hero() {
             fontFamily: '"A2Z", Arial, sans-serif',
             fontWeight: 700,
             fontSize: 'clamp(2.5rem, 4.8vw, 4.4rem)',
-            lineHeight: 1.12,
+            lineHeight: 1.28,
             letterSpacing: '0em',
             color: 'var(--color-ink)',
             marginBottom: '64px',
