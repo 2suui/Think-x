@@ -239,7 +239,7 @@ function Hero() {
             lineHeight: 1.15,
             letterSpacing: '0em',
             color: 'var(--color-ink)',
-            marginBottom: '36px',
+            marginBottom: '32px',
           }}
         >
           Don't just record.
@@ -252,7 +252,7 @@ function Hero() {
             lineHeight: 1.8,
             color: 'var(--color-ink-secondary)',
             maxWidth: '520px',
-            marginBottom: '56px',
+            marginBottom: '76px',
             fontWeight: 500,
             fontFamily: '"A2Z", Arial, sans-serif',
             letterSpacing: '0.01em',
