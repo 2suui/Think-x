@@ -51,7 +51,7 @@ const SectionTag = ({ text, style = {} }) => (
       fontSize: '0.8rem',
       letterSpacing: '0.02em',
       textTransform: 'uppercase',
-      marginBottom: '24px',
+      marginBottom: '16px',
       lineHeight: '1.3',
       ...style,
     }}
@@ -227,16 +227,16 @@ function Hero() {
       }}
       className="hero-grid"
     >
-      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '48px', paddingBottom: '48px' }}>
+      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '16px', paddingBottom: '48px' }}>
         <div>
-          <SectionTag text="A new way to think." style={{ marginBottom: '28px' }} />
+          <SectionTag text="A new way to think." style={{ marginBottom: '14px' }} />
         </div>
         <h1
           style={{
             fontFamily: '"A2Z", Arial, sans-serif',
             fontWeight: 700,
             fontSize: 'clamp(2.5rem, 4.8vw, 4.4rem)',
-            lineHeight: 1.18,
+            lineHeight: 1.15,
             letterSpacing: '0em',
             color: 'var(--color-ink)',
             marginBottom: '36px',
