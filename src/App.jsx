@@ -26,10 +26,10 @@ function useFadeIn() {
 }
 
 const NAV_LINKS = [
-  { name: 'What is think X', href: '#why' },
+  { name: 'What is Think X', href: '#why' },
   { name: 'Behind the X', href: '#philosophy' },
-  { name: 'think X Principles', href: '#philosophy' },
-  { name: 'Inside think X', href: '#product' },
+  { name: 'Think X Principles', href: '#philosophy' },
+  { name: 'Inside Think X', href: '#product' },
   { name: 'How to use', href: '#how-it-works' },
 ];
 
@@ -82,7 +82,7 @@ function Nav() {
               letterSpacing: '0.02em',
             }}
           >
-            think X
+            Think X
           </span>
         </a>
 
@@ -244,7 +244,7 @@ function Hero() {
             fontFamily: '"A2Z", Arial, sans-serif',
           }}
         >
-          think X is a notebook system designed to help you capture, organize, and rediscover your thoughts—turning notes into meaningful understanding.
+          Think X is a notebook system designed to help you capture, organize, and rediscover your thoughts—turning notes into meaningful understanding.
         </p>
         <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
           <a
@@ -265,7 +265,7 @@ function Hero() {
             onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-brand-blue)')}
             onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-ink)')}
           >
-            Discover think X
+            Discover Think X
           </a>
           <a
             href="#product"
@@ -289,7 +289,7 @@ function Hero() {
       <div style={{ position: 'relative', background: 'var(--color-surface)', overflow: 'hidden', height: '100%', minHeight: '500px' }}>
         <img
           src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?w=960&h=1100&fit=crop&auto=format"
-          alt="think X notebook open on a clean desk"
+          alt="Think X notebook open on a clean desk"
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
         />
         <div
@@ -314,7 +314,7 @@ function Hero() {
               letterSpacing: '0.02em',
             }}
           >
-            think X — 2026 Edition
+            Think X — 2026 Edition
           </p>
         </div>
       </div>
@@ -350,7 +350,7 @@ function WhyThinkX() {
             textTransform: 'uppercase',
           }}
         >
-          Why think X?
+          Why Think X?
         </p>
         <h2
           style={{
@@ -368,7 +368,7 @@ function WhyThinkX() {
           But <em style={{ fontStyle: 'italic', fontWeight: 700, fontFamily: '"A2Z", Arial, sans-serif' }}>most are never read again.</em>
         </h2>
         <p style={{ fontSize: '1rem', color: 'var(--color-ink-secondary)', maxWidth: '520px', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif' }}>
-          think X is designed for the gap between capturing and understanding — a system that brings you back to what you wrote, and makes it mean something.
+          Think X is designed for the gap between capturing and understanding — a system that brings you back to what you wrote, and makes it mean something.
         </p>
       </div>
 
@@ -430,7 +430,7 @@ function WhyThinkX() {
           <div key={i} style={{ aspectRatio: '4/3', overflow: 'hidden', background: 'var(--color-surface)' }}>
             <img
               src={src}
-              alt="think X product visual"
+              alt="Think X product visual"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.6s ease' }}
               onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
               onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
@@ -451,7 +451,7 @@ function Philosophy() {
   const ref = useFadeIn();
   const PILLARS = [
     { title: 'Clarity', body: 'Every page is intentional. No wasted space — only structured space.' },
-    { title: 'Connection', body: 'Ideas live in relation to each other. think X makes those links visible.' },
+    { title: 'Connection', body: 'Ideas live in relation to each other. Think X makes those links visible.' },
     { title: 'Return', body: 'A notebook you return to is more valuable than one you fill and forget.' },
     { title: 'Growth', body: 'Understanding compounds. Each entry builds on the last.' },
   ];
@@ -484,10 +484,10 @@ function Philosophy() {
               margin: '0 auto 24px',
             }}
           >
-            think X designs the <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>way you meet your thoughts again</em> — not just the way you record them.
+            Think X designs the <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>way you meet your thoughts again</em> — not just the way you record them.
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-secondary)', letterSpacing: '0.03em', fontStyle: 'italic', fontWeight: 600, fontFamily: '"A2Z", Arial, sans-serif' }}>
-            think X는 기록의 방식이 아닌, 생각과 다시 만나는 방식을 디자인합니다.
+            Think X는 기록의 방식이 아닌, 생각과 다시 만나는 방식을 디자인합니다.
           </p>
         </div>
 
@@ -647,7 +647,7 @@ function ProductFeatures() {
           <div style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
             <img
               src="https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=800&h=720&fit=crop&auto=format"
-              alt="think X open notebook showing inside pages"
+              alt="Think X open notebook showing inside pages"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '480px' }}
             />
           </div>
@@ -714,7 +714,7 @@ function ProductDetail() {
         <div style={{ background: 'var(--color-surface)', overflow: 'hidden', borderRadius: '2px' }}>
           <img
             src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=900&h=800&fit=crop&auto=format"
-            alt="think X inner pages close-up"
+            alt="Think X inner pages close-up"
             style={{ width: '100%', aspectRatio: '9/8', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -767,7 +767,7 @@ function UseCases() {
   return (
     <section style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-        <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '72px' }}>
+        <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
           <p
             style={{
               fontFamily: '"A2Z", Arial, sans-serif',
@@ -851,7 +851,7 @@ function DemoVideo() {
           Demo Video
         </p>
         <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)' }}>
-          See think X <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>in use.</em>
+          See Think X <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>in use.</em>
         </h2>
       </div>
       <div
@@ -869,7 +869,7 @@ function DemoVideo() {
         {playing ? (
           <iframe
             src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
-            title="think X Demo Video"
+            title="Think X Demo Video"
             style={{ width: '100%', height: '100%', border: 'none' }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -881,7 +881,7 @@ function DemoVideo() {
           >
             <img
               src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&h=675&fit=crop&auto=format"
-              alt="think X notebook on a reading desk"
+              alt="Think X notebook on a reading desk"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
             <div
@@ -922,10 +922,10 @@ function DemoVideo() {
 
 function Footer() {
   const FOOTER_NAV = [
-    { label: 'What is think X', href: '#why' },
+    { label: 'What is Think X', href: '#why' },
     { label: 'Behind the X', href: '#philosophy' },
-    { label: 'think X Principles', href: '#philosophy' },
-    { label: 'Inside think X', href: '#product' },
+    { label: 'Think X Principles', href: '#philosophy' },
+    { label: 'Inside Think X', href: '#product' },
     { label: 'How to use', href: '#how-it-works' },
   ];
 
@@ -934,7 +934,7 @@ function Footer() {
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: 'clamp(48px,8vw,96px) clamp(24px,5vw,120px)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '48px', marginBottom: '80px' }}>
           <div>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.6rem', letterSpacing: '0.02em', color: '#fff', margin: '0 0 12px' }}>think X</p>
+            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.6rem', letterSpacing: '0.02em', color: '#fff', margin: '0 0 12px' }}>Think X</p>
             <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 500, fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: 0, letterSpacing: '0.01em' }}>
               Designed for thoughtful note-taking.
             </p>
@@ -963,7 +963,7 @@ function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '28px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500 }}>© 2026 think X.</p>
+          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500 }}>© 2026 Think X.</p>
           <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500 }}>Graduation Project by Suyeon Lee.</p>
         </div>
       </div>
