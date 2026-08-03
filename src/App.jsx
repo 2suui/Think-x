@@ -229,7 +229,7 @@ function Hero() {
     >
       <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '0px', paddingBottom: '48px' }}>
         <div>
-          <SectionTag text="A new way to think." style={{ marginBottom: '36px' }} />
+          <SectionTag text="A new way to think." style={{ marginBottom: '48px' }} />
         </div>
         <h1
           style={{
@@ -239,7 +239,7 @@ function Hero() {
             lineHeight: 1.12,
             letterSpacing: '0em',
             color: 'var(--color-ink)',
-            marginBottom: '48px',
+            marginBottom: '64px',
             marginTop: '0px',
           }}
         >
@@ -253,7 +253,7 @@ function Hero() {
             lineHeight: 1.8,
             color: 'var(--color-ink-secondary)',
             maxWidth: '520px',
-            marginBottom: '64px',
+            marginBottom: '92px',
             fontWeight: 500,
             fontFamily: '"A2Z", Arial, sans-serif',
             letterSpacing: '0.01em',
