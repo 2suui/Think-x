@@ -273,6 +273,13 @@ body {
   margin: 0 auto;
 }
 
+/* Demo Video Wrapper with Extra Bottom Spacing */
+.demo-video-wrapper {
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 120px) clamp(130px, 15vw, 210px);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .section-heading-lg {
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
@@ -570,7 +577,7 @@ body {
   margin-left: 4px;
 }
 
-/* Compact Sleek Footer */
+/* Compact Sleek Footer with Generous Bottom Spacing */
 .site-footer {
   background: var(--color-ink);
   color: #ffffff;
@@ -579,7 +586,7 @@ body {
 .footer-inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 36px clamp(24px, 5vw, 120px) 28px;
+  padding: 44px clamp(24px, 5vw, 120px) 68px;
 }
 
 .footer-top-row {
@@ -588,7 +595,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .footer-nav-list {
@@ -613,7 +620,7 @@ body {
 
 .footer-bottom-row {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 16px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;

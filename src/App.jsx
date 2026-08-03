@@ -333,6 +333,7 @@ function ProductFeatures() {
             <img
               src="https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=800&h=720&fit=crop&auto=format"
               alt="Think X open notebook showing inside pages"
+              className="feature-img"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '480px' }}
             />
           </div>
@@ -464,7 +465,7 @@ function DemoVideo() {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <section className="section-wrapper">
+    <section className="demo-video-wrapper">
       <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '56px' }}>
         <div>
           <SectionTag text="Demo Video" style={{ marginBottom: '16px' }} />
