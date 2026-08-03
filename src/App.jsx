@@ -109,7 +109,7 @@ function Nav() {
           </span>
         </a>
 
-        {/* Clean nav container with dark grey links turning black on hover + subtle #f0d41f glow */}
+        {/* Clean nav container with lighter grey links turning black on hover + subtle #f0d41f glow */}
         <nav
           className="hidden md:flex"
           style={{
@@ -123,7 +123,7 @@ function Nav() {
               href={link.href}
               style={{
                 fontSize: '0.875rem',
-                color: '#555555',
+                color: '#777777',
                 textDecoration: 'none',
                 letterSpacing: '0.01em',
                 fontWeight: 600,
@@ -141,7 +141,7 @@ function Nav() {
                 e.currentTarget.style.background = '#ffffff';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#555555';
+                e.currentTarget.style.color = '#777777';
                 e.currentTarget.style.borderColor = 'transparent';
                 e.currentTarget.style.boxShadow = 'none';
                 e.currentTarget.style.background = 'transparent';
@@ -190,7 +190,7 @@ function Nav() {
                 style={{
                   fontSize: '0.95rem',
                   fontWeight: 600,
-                  color: '#555555',
+                  color: '#777777',
                   textDecoration: 'none',
                   fontFamily: '"A2Z", Arial, sans-serif',
                   letterSpacing: '0.01em',
