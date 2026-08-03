@@ -876,22 +876,22 @@ function Footer() {
 
   return (
     <footer style={{ background: 'var(--color-ink)', color: '#fff' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: 'clamp(48px,8vw,96px) clamp(24px,5vw,120px)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '48px', marginBottom: '80px' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '36px clamp(24px, 5vw, 120px) 28px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px', marginBottom: '24px' }}>
           <div>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.6rem', letterSpacing: '0.01em', color: '#fff', margin: '0 0 12px' }}>Think X</p>
-            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 500, fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: 0, letterSpacing: '0.01em' }}>
+            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', letterSpacing: '0.01em', color: '#fff', margin: '0 0 4px' }}>Think X</p>
+            <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 500, fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', margin: 0, letterSpacing: '0.01em' }}>
               Designed for thoughtful note-taking.
             </p>
           </div>
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: '14px', alignItems: 'flex-end' }}>
+          <nav style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
             {FOOTER_NAV.map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 style={{
                   fontFamily: '"A2Z", Arial, sans-serif',
-                  fontSize: '0.9rem',
+                  fontSize: '0.85rem',
                   fontWeight: 500,
                   color: 'rgba(255,255,255,0.7)',
                   textDecoration: 'none',
@@ -907,9 +907,9 @@ function Footer() {
           </nav>
         </div>
 
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)', paddingTop: '28px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>© 2026 Think X.</p>
-          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>Graduation Project by Suyeon Lee.</p>
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.12)', paddingTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>© 2026 Think X.</p>
+          <p style={{ fontFamily: '"A2Z", Arial, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', margin: 0, fontWeight: 500, letterSpacing: '0.01em' }}>Graduation Project by Suyeon Lee.</p>
         </div>
       </div>
     </footer>
