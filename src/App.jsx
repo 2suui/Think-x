@@ -227,19 +227,20 @@ function Hero() {
       }}
       className="hero-grid"
     >
-      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '16px', paddingBottom: '48px' }}>
+      <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '0px', paddingBottom: '48px' }}>
         <div>
-          <SectionTag text="A new way to think." style={{ marginBottom: '6px' }} />
+          <SectionTag text="A new way to think." style={{ marginBottom: '2px' }} />
         </div>
         <h1
           style={{
             fontFamily: '"A2Z", Arial, sans-serif',
             fontWeight: 700,
             fontSize: 'clamp(2.5rem, 4.8vw, 4.4rem)',
-            lineHeight: 1.15,
+            lineHeight: 1.12,
             letterSpacing: '0em',
             color: 'var(--color-ink)',
             marginBottom: '32px',
+            marginTop: '0px',
           }}
         >
           Don't just record.
