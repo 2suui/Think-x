@@ -37,6 +37,29 @@ const RULE = () => (
   <div style={{ height: '1.5px', background: 'var(--color-rule)', width: '100%' }} />
 );
 
+// Reusable Yellow Box Tag Component
+const SectionTag = ({ text, style = {} }) => (
+  <span
+    style={{
+      display: 'inline-block',
+      background: 'var(--color-brand-yellow)',
+      color: 'var(--color-ink)',
+      padding: '6px 14px',
+      borderRadius: '2px',
+      fontFamily: '"A2Z", Arial, sans-serif',
+      fontWeight: 700,
+      fontSize: '0.85rem',
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase',
+      marginBottom: '18px',
+      boxShadow: '0 2px 6px rgba(0,0,0,0.04)',
+      ...style,
+    }}
+  >
+    {text}
+  </span>
+);
+
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -204,20 +227,9 @@ function Hero() {
       className="hero-grid"
     >
       <div ref={textRef} className="fade-in" style={{ paddingRight: '48px', paddingTop: '40px', paddingBottom: '40px' }}>
-        <p
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontWeight: 700,
-            fontStyle: 'italic',
-            fontSize: '1rem',
-            color: 'var(--color-brand-yellow)',
-            letterSpacing: '0.08em',
-            marginBottom: '20px',
-            textTransform: 'uppercase',
-          }}
-        >
-          A new way to think.
-        </p>
+        <div>
+          <SectionTag text="A new way to think." />
+        </div>
         <h1
           style={{
             fontFamily: '"A2Z", Arial, sans-serif',
@@ -338,20 +350,9 @@ function WhyThinkX() {
   return (
     <section id="why" style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
       <div ref={headRef} className="fade-in" style={{ marginBottom: '72px' }}>
-        <p
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontStyle: 'italic',
-            fontSize: '1rem',
-            fontWeight: 700,
-            color: 'var(--color-brand-yellow)',
-            letterSpacing: '0.08em',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-          }}
-        >
-          Why Think X?
-        </p>
+        <div>
+          <SectionTag text="Why Think X?" />
+        </div>
         <h2
           style={{
             fontFamily: '"A2Z", Arial, sans-serif',
@@ -390,14 +391,15 @@ function WhyThinkX() {
                 width: '44px',
                 height: '44px',
                 borderRadius: '2px',
-                background: 'var(--color-surface)',
+                background: 'var(--color-brand-yellow)',
+                color: 'var(--color-ink)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '1px solid var(--color-rule)',
+                fontWeight: 700,
               }}
             >
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-brand-yellow)' }}>
+              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.05rem', color: 'var(--color-ink)' }}>
                 0{i + 1}
               </span>
             </div>
@@ -459,20 +461,9 @@ function Philosophy() {
     <section id="philosophy" style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '72px' }}>
-          <p
-            style={{
-              fontFamily: '"A2Z", Arial, sans-serif',
-              fontStyle: 'italic',
-              fontSize: '1rem',
-              fontWeight: 700,
-              color: 'var(--color-brand-yellow)',
-              letterSpacing: '0.08em',
-              marginBottom: '16px',
-              textTransform: 'uppercase',
-            }}
-          >
-            Philosophy
-          </p>
+          <div>
+            <SectionTag text="Philosophy" />
+          </div>
           <h2
             style={{
               fontFamily: '"A2Z", Arial, sans-serif',
@@ -503,15 +494,15 @@ function Philosophy() {
                   width: '72px',
                   height: '72px',
                   borderRadius: '50%',
-                  background: 'var(--color-surface)',
+                  background: 'var(--color-brand-yellow)',
                   margin: '0 auto 24px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  border: '1.5px solid var(--color-rule)',
+                  border: '1px solid var(--color-ink)',
                 }}
               >
-                <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-ink)' }}>
+                <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-ink)' }}>
                   {p.title[0]}
                 </span>
               </div>
@@ -554,20 +545,9 @@ function HowItWorks() {
   return (
     <section id="how-it-works" style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
       <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
-        <p
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontStyle: 'italic',
-            fontSize: '1rem',
-            fontWeight: 700,
-            color: 'var(--color-brand-yellow)',
-            letterSpacing: '0.08em',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-          }}
-        >
-          How it Works
-        </p>
+        <div>
+          <SectionTag text="How it Works" />
+        </div>
         <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)' }}>
           Three stages.
           <br />
@@ -587,7 +567,20 @@ function HowItWorks() {
               />
             </div>
             <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-brand-yellow)', marginTop: '4px', minWidth: '28px' }}>
+              <span
+                style={{
+                  fontFamily: '"A2Z", Arial, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  background: 'var(--color-brand-yellow)',
+                  color: 'var(--color-ink)',
+                  padding: '2px 8px',
+                  borderRadius: '2px',
+                  marginTop: '4px',
+                  minWidth: '28px',
+                  textAlign: 'center',
+                }}
+              >
                 {s.num}
               </span>
               <div>
@@ -620,20 +613,9 @@ function ProductFeatures() {
     <section style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) 0' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px,5vw,120px)' }}>
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
-          <p
-            style={{
-              fontFamily: '"A2Z", Arial, sans-serif',
-              fontStyle: 'italic',
-              fontSize: '1rem',
-              fontWeight: 700,
-              color: 'var(--color-brand-yellow)',
-              letterSpacing: '0.08em',
-              marginBottom: '16px',
-              textTransform: 'uppercase',
-            }}
-          >
-            Product Features
-          </p>
+          <div>
+            <SectionTag text="Product Features" />
+          </div>
           <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)' }}>
             Built around
             <br />
@@ -691,20 +673,9 @@ function ProductDetail() {
   return (
     <section id="product" style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
       <div ref={ref} className="fade-in" style={{ marginBottom: '64px' }}>
-        <p
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontStyle: 'italic',
-            fontSize: '1rem',
-            fontWeight: 700,
-            color: 'var(--color-brand-yellow)',
-            letterSpacing: '0.08em',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-          }}
-        >
-          Product Detail
-        </p>
+        <div>
+          <SectionTag text="Product Detail" />
+        </div>
         <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)' }}>
           Inside the pages.
         </h2>
@@ -728,7 +699,19 @@ function ProductDetail() {
           <RULE />
           {['Capture Page', 'Keyword Index', 'Connection Space', 'Archive Section'].map((item, i) => (
             <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '20px 0', borderBottom: '1px solid var(--color-rule)' }}>
-              <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontStyle: 'italic', fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-brand-yellow)', minWidth: '28px' }}>
+              <span
+                style={{
+                  fontFamily: '"A2Z", Arial, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  background: 'var(--color-brand-yellow)',
+                  color: 'var(--color-ink)',
+                  padding: '2px 8px',
+                  borderRadius: '2px',
+                  minWidth: '28px',
+                  textAlign: 'center',
+                }}
+              >
                 0{i + 1}
               </span>
               <span style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 600, fontSize: '1.2rem', color: 'var(--color-ink)' }}>{item}</span>
@@ -768,20 +751,9 @@ function UseCases() {
     <section style={{ background: 'var(--color-surface)', padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
-          <p
-            style={{
-              fontFamily: '"A2Z", Arial, sans-serif',
-              fontStyle: 'italic',
-              fontSize: '1rem',
-              fontWeight: 700,
-              color: 'var(--color-brand-yellow)',
-              letterSpacing: '0.08em',
-              marginBottom: '16px',
-              textTransform: 'uppercase',
-            }}
-          >
-            Use Cases
-          </p>
+          <div>
+            <SectionTag text="Use Cases" />
+          </div>
           <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)' }}>
             One system.
             <br />
@@ -805,17 +777,20 @@ function UseCases() {
                 <span
                   style={{
                     fontFamily: '"A2Z", Arial, sans-serif',
-                    fontStyle: 'italic',
-                    fontSize: '0.85rem',
+                    fontSize: '0.8rem',
                     fontWeight: 700,
-                    color: 'var(--color-brand-yellow)',
+                    background: 'var(--color-brand-yellow)',
+                    color: 'var(--color-ink)',
+                    padding: '4px 10px',
+                    borderRadius: '2px',
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
+                    display: 'inline-block',
                   }}
                 >
                   {c.tag}
                 </span>
-                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', color: 'var(--color-ink)', margin: '10px 0 14px' }}>
+                <h3 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: '1.4rem', color: 'var(--color-ink)', margin: '12px 0 14px' }}>
                   {c.title}
                 </h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, fontFamily: '"A2Z", Arial, sans-serif' }}>
@@ -836,20 +811,9 @@ function DemoVideo() {
   return (
     <section style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)', maxWidth: '1280px', margin: '0 auto' }}>
       <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '56px' }}>
-        <p
-          style={{
-            fontFamily: '"A2Z", Arial, sans-serif',
-            fontStyle: 'italic',
-            fontSize: '1rem',
-            fontWeight: 700,
-            color: 'var(--color-brand-yellow)',
-            letterSpacing: '0.08em',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-          }}
-        >
-          Demo Video
-        </p>
+        <div>
+          <SectionTag text="Demo Video" />
+        </div>
         <h2 style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700, fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', lineHeight: 1.2, color: 'var(--color-ink)' }}>
           See Think X <em style={{ fontFamily: '"A2Z", Arial, sans-serif', fontWeight: 700 }}>in use.</em>
         </h2>
