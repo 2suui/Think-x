@@ -78,8 +78,8 @@ export default function FeaturesSection() {
             display: 'flex',
             flexDirection: 'column',
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-              <span className="step-badge">{p.num}</span>
+            <div style={{ marginBottom: '20px' }}>
+              <span className="step-badge" style={{ display: 'inline-block', marginBottom: '12px' }}>{p.num}</span>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-ink)', margin: 0 }}>
                 {p.title}
               </h3>
