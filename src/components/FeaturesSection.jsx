@@ -7,7 +7,7 @@ export default function FeaturesSection() {
     { label: 'Connection Space', desc: 'Dedicated spreads for linking entries across time' },
     { label: 'Archive Section', desc: 'A permanent home for insights worth keeping' },
     { label: 'Thread Format', desc: 'Thread-based pages encourage continued thinking' },
-    { label: '90gsm Paper', desc: 'Fountain pen-friendly, ghosting-free sheets' },
+    { label: '120gsm Paper', desc: 'Fountain pen-friendly, ghosting-free sheets' },
   ];
 
   return (
