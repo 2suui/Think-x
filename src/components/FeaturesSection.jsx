@@ -19,10 +19,12 @@ export default function FeaturesSection() {
               Think X Principles
             </span>
           </div>
-          <h2 className="section-heading-lg">
+          <h2 className="section-heading-lg" style={{ maxWidth: '780px' }}>
             Built around
             <br />
-            <em>how thoughts actually work.</em>
+            <em style={{ fontStyle: 'italic', fontWeight: 700, whiteSpace: 'nowrap' }}>
+              how thoughts actually work.
+            </em>
           </h2>
         </div>
       </div>
