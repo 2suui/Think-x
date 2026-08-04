@@ -446,7 +446,7 @@ function ProductFeatures() {
           <h2 className="section-heading-lg">
             Built around
             <br />
-            <em>how thought actually works.</em>
+            <em>how thoughts actually work.</em>
           </h2>
         </div>
       </div>
