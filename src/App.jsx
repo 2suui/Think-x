@@ -167,9 +167,9 @@ function WhyThinkX() {
           <SectionTag text="Why Think X?" style={{ marginBottom: '48px' }} />
         </div>
         <h2 className="section-heading-lg" style={{ marginBottom: '64px' }}>
-          We write down countless thoughts.
+          We capture countless thoughts,
           <br />
-          <em style={{ fontStyle: 'italic', fontWeight: 700 }}>Yet most of them disappear before they become meaningful.</em>
+          <em style={{ fontStyle: 'italic', fontWeight: 700 }}>but most never become meaningful.</em>
         </h2>
         <p className="section-subtext" style={{ maxWidth: '640px' }}>
           Think X is designed for the gap between capturing and understanding — a system that helps you revisit, select, and transform your notes into meaningful insights.
