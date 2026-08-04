@@ -474,7 +474,7 @@ function ProductFeatures() {
             <SectionTag text="Think X Principles" style={{ marginBottom: '16px' }} />
           </div>
           <h2 className="section-heading-lg">
-            Built around
+            Built for
             <br />
             <em style={{ fontStyle: 'italic', fontWeight: 700 }}>
               the way we think.

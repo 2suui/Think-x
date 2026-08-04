@@ -50,7 +50,7 @@ export default function FeaturesSection() {
             </span>
           </div>
           <h2 className="section-heading-lg">
-            Built around
+            Built for
             <br />
             <em style={{ fontStyle: 'italic', fontWeight: 700 }}>
               the way we think.
