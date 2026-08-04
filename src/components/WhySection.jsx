@@ -1,25 +1,20 @@
 import React from 'react';
-import { BookOpen, Hash, GitCommit, Archive } from 'lucide-react';
 
 export default function WhySection() {
   const steps = [
     {
-      icon: <BookOpen size={20} color="var(--color-brand-yellow)" />,
       label: 'Capture',
       desc: 'Every thought has a place. Structured pages guide you from raw ideas to refined insights without friction.',
     },
     {
-      icon: <Hash size={20} color="var(--color-brand-yellow)" />,
       label: 'Index',
       desc: 'Keywords surface what matters. Never lose a thread buried in pages again with the front-of-book index.',
     },
     {
-      icon: <GitCommit size={20} color="var(--color-brand-yellow)" />,
       label: 'Connect',
       desc: 'A dedicated space links ideas across entries, revealing patterns and synthesis you would never spot otherwise.',
     },
     {
-      icon: <Archive size={20} color="var(--color-brand-yellow)" />,
       label: 'Archive',
       desc: 'Revisit and rediscover. The archive turns your notebook from a linear record into a living knowledge base.',
     },
@@ -51,28 +46,28 @@ export default function WhySection() {
         <h2
           style={{
             fontFamily: 'var(--font-display)',
-            fontWeight: 300,
+            fontWeight: 700,
             fontSize: 'clamp(2rem, 3.5vw, 3.2rem)',
             lineHeight: 1.2,
             color: 'var(--color-ink)',
             maxWidth: '700px',
-            marginBottom: '24px',
+            marginBottom: '64px',
           }}
         >
-          We take countless notes.
+          We capture countless thoughts.
           <br />
-          But <em style={{ fontStyle: 'italic', color: 'var(--color-brand-blue)' }}>most are never read again.</em>
+          <em style={{ fontStyle: 'italic', fontWeight: 700 }}>But most never become meaningful.</em>
         </h2>
         <p
           style={{
             fontSize: '0.9375rem',
             color: 'var(--color-ink-secondary)',
-            maxWidth: '540px',
+            maxWidth: '640px',
             lineHeight: 1.75,
-            fontWeight: 300,
+            fontWeight: 500,
           }}
         >
-          Think X is designed for the gap between capturing and understanding — a physical note system that brings you back to what you wrote, and makes it mean something.
+          Think X is designed for the gap between capturing and understanding — a system that helps you revisit, select, and transform your notes into meaningful insights.
         </p>
       </div>
 
@@ -96,10 +91,7 @@ export default function WhySection() {
               display: 'flex',
               flexDirection: 'column',
               gap: '16px',
-              transition: 'transform 0.3s ease, background 0.3s ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-surface)')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#ffffff')}
           >
             <div
               style={{
