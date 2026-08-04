@@ -322,7 +322,7 @@ function ProductFeatures() {
 
   return (
     <section className="features-split-wrapper">
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px, 5vw, 120px)' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
           <div>
             <SectionTag text="Product Features" style={{ marginBottom: '16px' }} />
@@ -335,7 +335,7 @@ function ProductFeatures() {
         </div>
       </div>
 
-      <div style={{ position: 'relative', maxWidth: '1280px', margin: '0 auto', padding: '0 clamp(24px, 5vw, 120px)' }}>
+      <div style={{ position: 'relative', maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
         <div className="feature-split-grid feature-split">
           <div style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
             <img

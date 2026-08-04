@@ -287,16 +287,16 @@ body {
   display: block;
 }
 
-/* Common Section Wrapper */
+/* Common Section Wrapper - Standardized 40px Side Padding matching Hero */
 .section-wrapper {
-  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 120px);
+  padding: clamp(80px, 10vw, 140px) 40px;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 /* Demo Video Wrapper with Extra Bottom Spacing */
 .demo-video-wrapper {
-  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 120px) clamp(130px, 15vw, 210px);
+  padding: clamp(80px, 10vw, 140px) 40px clamp(130px, 15vw, 210px);
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -406,7 +406,7 @@ body {
 /* Philosophy Section */
 .philosophy-section {
   background: var(--color-surface);
-  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 120px);
+  padding: clamp(80px, 10vw, 140px) 40px;
 }
 
 .philosophy-grid {
@@ -618,7 +618,7 @@ body {
 .footer-inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 44px clamp(24px, 5vw, 120px) 68px;
+  padding: 44px 40px 68px;
 }
 
 .footer-top-row {
@@ -706,11 +706,14 @@ body {
   .header-container,
   .hero-section,
   .section-wrapper,
+  .philosophy-section,
   .demo-video-wrapper,
   .footer-inner {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
   .mobile-menu-toggle {
     display: none !important;
@@ -719,12 +722,14 @@ body {
 
 /* 2. Tablet: 768px ~ 1279px → Slightly adjusted sizes & paddings */
 @media (min-width: 768px) and (max-width: 1279px) {
-  .header-container {
-    padding: 0 32px;
-  }
-  .hero-section {
-    padding-left: 32px;
-    padding-right: 32px;
+  .header-container,
+  .hero-section,
+  .section-wrapper,
+  .philosophy-section,
+  .demo-video-wrapper,
+  .footer-inner {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
   }
   .hero-text-col {
     padding-right: 28px;
@@ -734,13 +739,15 @@ body {
   .section-wrapper,
   .philosophy-section,
   .demo-video-wrapper {
-    padding: 80px 32px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .features-split-wrapper {
     padding: 80px 0;
   }
   .footer-inner {
-    padding: 36px 32px 52px;
+    padding-top: 36px;
+    padding-bottom: 52px;
   }
   .nav-link-item {
     font-size: 0.825rem;
@@ -753,8 +760,14 @@ body {
 
 /* 3. Mobile: <= 767px → Mobile layout with drawer toggle */
 @media (max-width: 767px) {
-  .header-container {
-    padding: 0 20px;
+  .header-container,
+  .hero-section,
+  .section-wrapper,
+  .philosophy-section,
+  .demo-video-wrapper,
+  .footer-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
   .nav-menu {
     display: none !important;
@@ -764,8 +777,6 @@ body {
   }
   .hero-section {
     grid-template-columns: 1fr !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     min-height: auto;
     padding-top: 76px;
   }
@@ -792,7 +803,8 @@ body {
   .section-wrapper,
   .philosophy-section,
   .demo-video-wrapper {
-    padding: 56px 20px !important;
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
   }
   .why-cards-grid {
     grid-template-columns: 1fr !important;
@@ -809,7 +821,8 @@ body {
     gap: 36px !important;
   }
   .footer-inner {
-    padding: 32px 20px 48px !important;
+    padding-top: 32px !important;
+    padding-bottom: 48px !important;
   }
   .footer-top-row {
     flex-direction: column;
