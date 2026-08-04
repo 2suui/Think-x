@@ -247,12 +247,12 @@ function Philosophy() {
             <SectionTag text="Behind the X" style={{ marginBottom: '48px' }} />
           </div>
           <h2 className="section-heading-lg" style={{ margin: '0 auto 32px', maxWidth: '880px' }}>
-            Think X began with the idea of a "Thinking Box."
+            Think X began as "Thinking Box."
             <br />
-            A place to collect thoughts, revisit them, and discover new meaning.
+            A place for collecting thoughts and finding them again.
             <br />
             <em style={{ fontStyle: 'italic', fontWeight: 700 }}>
-              Over time, the box evolved into X—a symbol of connection, possibility, and the unknown.
+              It evolved into X—a symbol of connection and new perspectives.
             </em>
           </h2>
           <p className="philosophy-subtext-ko" style={{ maxWidth: '820px', margin: '0 auto' }}>

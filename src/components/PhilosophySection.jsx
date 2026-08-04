@@ -10,7 +10,7 @@ export default function PhilosophySection() {
 
   return (
     <section id="philosophy" className="philosophy-section">
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <div className="philosophy-inner-container">
         <div className="fade-in visible" style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div>
             <span className="section-tag-yellow" style={{ marginBottom: '48px' }}>
@@ -18,12 +18,12 @@ export default function PhilosophySection() {
             </span>
           </div>
           <h2 className="section-heading-lg" style={{ margin: '0 auto 32px', maxWidth: '880px' }}>
-            Think X began with the idea of a "Thinking Box."
+            Think X began as "Thinking Box."
             <br />
-            A place to collect thoughts, revisit them, and discover new meaning.
+            A place for collecting thoughts and finding them again.
             <br />
             <em style={{ fontStyle: 'italic', fontWeight: 700 }}>
-              Over time, the box evolved into X—a symbol of connection, possibility, and the unknown.
+              It evolved into X—a symbol of connection and new perspectives.
             </em>
           </h2>
           <p className="philosophy-subtext-ko" style={{ maxWidth: '820px', margin: '0 auto' }}>
