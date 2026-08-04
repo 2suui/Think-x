@@ -300,10 +300,10 @@ function Philosophy() {
             <SectionTag text="Behind the X" style={{ marginBottom: '48px' }} />
           </div>
           <h2 className="section-heading-lg" style={{ margin: '0 auto 32px', maxWidth: '960px' }}>
-            Think X began as "Thinking Box." A place for collecting thoughts and finding <span style={{ whiteSpace: 'nowrap' }}>them again.</span>
+            Think X began as "Thinking Box." A place for collecting thoughts and finding
             <br />
             <em style={{ fontStyle: 'italic', fontWeight: 700 }}>
-              It evolved into X—a symbol of connection and new perspectives.
+              them again. It evolved into X—a symbol of connection and new perspectives.
             </em>
           </h2>
           <p className="philosophy-subtext-ko" style={{ maxWidth: '840px', margin: '0 auto' }}>
