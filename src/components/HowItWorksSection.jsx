@@ -46,13 +46,13 @@ export default function HowItWorksSection() {
 
   return (
     <section id="how-it-works" className="section-wrapper">
-      <div className="fade-in visible" style={{ marginBottom: '72px' }}>
+      <div className="fade-in visible" style={{ marginBottom: '92px' }}>
         <div>
           <span className="section-tag-yellow" style={{ marginBottom: '16px' }}>
             How to use
           </span>
         </div>
-        <h2 className="section-heading-lg">
+        <h2 className="section-heading-lg" style={{ marginBottom: 0 }}>
           Four stages.
           <br />
           <em>One continuous loop.</em>
@@ -66,7 +66,7 @@ export default function HowItWorksSection() {
               <img src={s.img} alt={s.title} className="step-img" loading="lazy" />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '8px' }}>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '10px' }}>
                 <span className="step-badge">{s.num}</span>
                 <h3 style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', margin: 0 }}>
                   {s.title}
@@ -77,7 +77,7 @@ export default function HowItWorksSection() {
                 fontSize: '0.875rem',
                 color: 'var(--color-ink-secondary)',
                 fontWeight: 600,
-                margin: '0 0 16px',
+                margin: 0,
                 lineHeight: 1.5,
                 minHeight: '2.8em',
                 display: 'flex',
@@ -90,10 +90,8 @@ export default function HowItWorksSection() {
                 fontSize: '0.825rem',
                 color: '#888888',
                 fontWeight: 400,
-                margin: 0,
+                margin: '20px 0 0 0',
                 lineHeight: 1.65,
-                borderTop: '1px solid #eeeeee',
-                paddingTop: '16px',
               }}>
                 {s.descKoLines.map((line, idx) => (
                   <React.Fragment key={idx}>
