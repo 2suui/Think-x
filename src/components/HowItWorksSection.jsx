@@ -65,41 +65,42 @@ export default function HowItWorksSection() {
             <div className="step-img-box">
               <img src={s.img} alt={s.title} className="step-img" loading="lazy" />
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '10px' }}>
-                <span className="step-badge">{s.num}</span>
-                <h3 style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', margin: 0 }}>
+            <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+              <span className="step-badge">{s.num}</span>
+
+              <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                <h3 style={{ fontWeight: 700, fontSize: '1.3rem', color: 'var(--color-ink)', margin: '0 0 8px 0' }}>
                   {s.title}
                 </h3>
+
+                <p style={{
+                  fontSize: '0.875rem',
+                  color: 'var(--color-ink-secondary)',
+                  fontWeight: 600,
+                  margin: 0,
+                  lineHeight: 1.5,
+                  minHeight: '2.8em',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                }}>
+                  {s.descEn}
+                </p>
+
+                <p style={{
+                  fontSize: '0.825rem',
+                  color: '#888888',
+                  fontWeight: 400,
+                  margin: '18px 0 0 0',
+                  lineHeight: 1.65,
+                }}>
+                  {s.descKoLines.map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      {idx < s.descKoLines.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+                </p>
               </div>
-
-              <p style={{
-                fontSize: '0.875rem',
-                color: 'var(--color-ink-secondary)',
-                fontWeight: 600,
-                margin: 0,
-                lineHeight: 1.5,
-                minHeight: '2.8em',
-                display: 'flex',
-                alignItems: 'flex-start',
-              }}>
-                {s.descEn}
-              </p>
-
-              <p style={{
-                fontSize: '0.825rem',
-                color: '#888888',
-                fontWeight: 400,
-                margin: '20px 0 0 0',
-                lineHeight: 1.65,
-              }}>
-                {s.descKoLines.map((line, idx) => (
-                  <React.Fragment key={idx}>
-                    {line}
-                    {idx < s.descKoLines.length - 1 && <br />}
-                  </React.Fragment>
-                ))}
-              </p>
             </div>
           </div>
         ))}
