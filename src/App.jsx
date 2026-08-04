@@ -244,13 +244,23 @@ function Philosophy() {
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div>
-            <SectionTag text="Behind the X" style={{ marginBottom: '16px' }} />
+            <SectionTag text="Behind the X" style={{ marginBottom: '48px' }} />
           </div>
-          <h2 className="section-heading-lg" style={{ margin: '0 auto 24px' }}>
-            Think X designs the <em>way you meet your thoughts again</em> — not just the way you record them.
+          <h2 className="section-heading-lg" style={{ margin: '0 auto 32px', maxWidth: '880px' }}>
+            Think X began with the idea of a "Thinking Box."
+            <br />
+            A place to collect thoughts, revisit them, and discover new meaning.
+            <br />
+            <em style={{ fontStyle: 'italic', fontWeight: 700 }}>
+              Over time, the box evolved into X—a symbol of connection, possibility, and the unknown.
+            </em>
           </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--color-ink-secondary)', fontStyle: 'italic', fontWeight: 600 }}>
-            Think X는 기록의 방식이 아닌, 생각과 다시 만나는 방식을 디자인합니다.
+          <p className="philosophy-subtext-ko" style={{ maxWidth: '820px', margin: '0 auto' }}>
+            Think X는 'Thinking Box'라는 아이디어에서 시작되었습니다.
+            <br />
+            생각을 담아두고, 다시 꺼내 보며, 새로운 의미를 발견하는 공간.
+            <br />
+            그 상자는 시간이 지나며 X로 발전했습니다. X는 연결, 가능성, 그리고 아직 발견되지 않은 생각을 상징합니다.
           </p>
         </div>
 

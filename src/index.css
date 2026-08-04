@@ -331,6 +331,14 @@ body {
   margin-bottom: 0;
 }
 
+.philosophy-subtext-ko {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #888888;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
 /* Why Think X Cards */
 .why-cards-grid {
   display: grid;
