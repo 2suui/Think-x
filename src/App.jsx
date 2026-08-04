@@ -33,6 +33,22 @@ const NAV_LINKS = [
   { name: 'How to use', href: '#how-it-works' },
 ];
 
+const handleSmoothScroll = (e, href) => {
+  if (href.startsWith('#')) {
+    e.preventDefault();
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const el = document.querySelector(href);
+      if (el) {
+        const yOffset = -76;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  }
+};
+
 const RULE = () => <div className="rule-divider" />;
 
 // Yellow Highlighter Section Tag Component
@@ -55,21 +71,34 @@ function Nav() {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <a href="#" className="nav-brand-logo">
+        <a
+          href="#"
+          className="nav-brand-logo"
+          onClick={(e) => handleSmoothScroll(e, '#')}
+        >
           Think X
         </a>
 
         {/* Right group: Nav links + Menu icon with direct explicit gap */}
         <div className="nav-right-group">
-          <nav className="nav-menu hidden md:flex">
+          <nav className="nav-menu">
             {NAV_LINKS.map((link) => (
-              <a key={link.name} href={link.href} className="nav-link-item">
+              <a
+                key={link.name}
+                href={link.href}
+                className="nav-link-item"
+                onClick={(e) => handleSmoothScroll(e, link.href)}
+              >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          <button className="mobile-menu-toggle" onClick={() => setOpen((v) => !v)} aria-label="Menu">
+          <button
+            className="mobile-menu-toggle"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle navigation menu"
+          >
             <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', width: '22px' }}>
               {[0, 1, 2].map((i) => (
                 <div
@@ -98,7 +127,14 @@ function Nav() {
         <div className="mobile-menu-drawer">
           {NAV_LINKS.map((l) => (
             <div key={l.name}>
-              <a href={l.href} onClick={() => setOpen(false)} className="mobile-menu-link">
+              <a
+                href={l.href}
+                onClick={(e) => {
+                  setOpen(false);
+                  handleSmoothScroll(e, l.href);
+                }}
+                className="mobile-menu-link"
+              >
                 {l.name}
               </a>
             </div>
@@ -129,10 +165,18 @@ function Hero() {
           Think X는 생각을 기록하고, 정리하고, 다시 발견하는 과정을 돕는 노트 시스템입니다. 단순한 메모를 넘어 의미 있는 아이디어와 깊은 이해로 연결합니다.
         </p>
         <div className="hero-buttons">
-          <a href="#why" className="btn-primary">
+          <a
+            href="#why"
+            className="btn-primary"
+            onClick={(e) => handleSmoothScroll(e, '#why')}
+          >
             Discover Think X
           </a>
-          <a href="#product" className="btn-link-underline">
+          <a
+            href="#product"
+            className="btn-link-underline"
+            onClick={(e) => handleSmoothScroll(e, '#product')}
+          >
             View the product ↓
           </a>
         </div>
@@ -143,6 +187,7 @@ function Hero() {
           src="https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?w=960&h=1100&fit=crop&auto=format"
           alt="Think X notebook open on a clean desk"
           className="hero-img"
+          loading="eager"
         />
       </div>
     </section>
@@ -174,6 +219,13 @@ function WhyThinkX() {
       descEn: 'Turn notes into insights.',
       descKo: '흩어진 기록을 연결해 의미 있는 통찰로 발전시킵니다.',
     },
+  ];
+
+  const GALLERY_IMAGES = [
+    'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&h=300&fit=crop',
+    'https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&h=300&fit=crop',
   ];
 
   return (
@@ -215,14 +267,14 @@ function WhyThinkX() {
       </div>
 
       <div className="why-gallery-grid gallery-grid">
-        {[
-          'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop',
-          'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=300&fit=crop',
-          'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&h=300&fit=crop',
-          'https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&h=300&fit=crop',
-        ].map((src, i) => (
-          <div key={i} className="why-gallery-item">
-            <img src={src} alt="Think X product visual" className="why-gallery-img" />
+        {GALLERY_IMAGES.map((src) => (
+          <div key={src} className="why-gallery-item">
+            <img
+              src={src}
+              alt="Think X product visual"
+              className="why-gallery-img"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
@@ -320,7 +372,7 @@ function HowItWorks() {
         {STEPS.map((s, i) => (
           <div key={s.num} className={`step-card fade-in fade-in-delay-${i + 1}`}>
             <div className="step-img-box">
-              <img src={s.img} alt={s.title} className="step-img" />
+              <img src={s.img} alt={s.title} className="step-img" loading="lazy" />
             </div>
             <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
               <span className="step-badge">{s.num}</span>
@@ -373,6 +425,7 @@ function ProductFeatures() {
               src="https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=800&h=720&fit=crop&auto=format"
               alt="Think X open notebook showing inside pages"
               className="feature-img"
+              loading="lazy"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', minHeight: '480px' }}
             />
           </div>
@@ -413,6 +466,7 @@ function ProductDetail() {
           <img
             src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=900&h=800&fit=crop&auto=format"
             alt="Think X inner pages close-up"
+            loading="lazy"
             style={{ width: '100%', aspectRatio: '9/8', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -478,7 +532,7 @@ function UseCases() {
           {CASES.map((c, i) => (
             <div key={c.tag} className={`case-card-box fade-in fade-in-delay-${i + 1}`}>
               <div className="case-img-box">
-                <img src={c.img} alt={c.title} className="case-img" />
+                <img src={c.img} alt={c.title} className="case-img" loading="lazy" />
               </div>
               <div style={{ padding: '32px' }}>
                 <span className="section-tag-yellow" style={{ marginBottom: '12px' }}>
@@ -520,7 +574,7 @@ function DemoVideo() {
             src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
             title="Think X Demo Video"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
         ) : (
@@ -528,6 +582,7 @@ function DemoVideo() {
             <img
               src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&h=675&fit=crop&auto=format"
               alt="Think X notebook on a reading desk"
+              loading="lazy"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
             <div
@@ -572,7 +627,12 @@ function Footer() {
           </div>
           <nav className="footer-nav-list">
             {FOOTER_NAV.map((l) => (
-              <a key={l.label} href={l.href} className="footer-nav-link">
+              <a
+                key={l.label}
+                href={l.href}
+                className="footer-nav-link"
+                onClick={(e) => handleSmoothScroll(e, l.href)}
+              >
                 {l.label}
               </a>
             ))}
