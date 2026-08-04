@@ -172,7 +172,11 @@ function WhyThinkX() {
           <em style={{ fontStyle: 'italic', fontWeight: 700 }}>But most never become meaningful.</em>
         </h2>
         <p className="section-subtext">
-          Think X is designed for the gap between capturing and understanding — a system that helps you revisit, select, and transform your notes into meaningful insights.
+          Think X is designed for the gap between capturing and understanding —
+          <br />
+          a system that helps you revisit, select, and transform your notes into
+          <br />
+          meaningful insights.
         </p>
         <p className="section-subtext-ko">
           Think X는 기록과 이해를 자연스럽게 연결하기 위해 만들어졌습니다. 흩어진 메모를 다시 발견하고, 필요한 내용을 선별해, 의미 있는 통찰로 연결해 주는 시스템입니다.

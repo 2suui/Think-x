@@ -24,7 +24,7 @@ export default function WhySection() {
     <section
       id="why"
       style={{
-        padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)',
+        padding: 'clamp(80px,10vw,140px) 40px',
         maxWidth: '1280px',
         margin: '0 auto',
       }}
@@ -67,7 +67,14 @@ export default function WhySection() {
             fontWeight: 500,
           }}
         >
-          Think X is designed for the gap between capturing and understanding — a system that helps you revisit, select, and transform your notes into meaningful insights.
+          Think X is designed for the gap between capturing and understanding —
+          <br />
+          a system that helps you revisit, select, and transform your notes into
+          <br />
+          meaningful insights.
+        </p>
+        <p className="section-subtext-ko">
+          Think X는 기록과 이해를 자연스럽게 연결하기 위해 만들어졌습니다. 흩어진 메모를 다시 발견하고, 필요한 내용을 선별해, 의미 있는 통찰로 연결해 주는 시스템입니다.
         </p>
       </div>
 
