@@ -303,7 +303,7 @@ body {
 
 .section-heading-lg {
   font-weight: 700;
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
   line-height: 1.38;
   color: var(--color-ink);
   max-width: 700px;
