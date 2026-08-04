@@ -6,40 +6,28 @@ export default function HowItWorksSection() {
       num: '01',
       title: 'Capture',
       descEn: 'Write freely without worrying about perfection.',
-      descKoLines: [
-        '떠오르는 생각을 형식에 얽매이지 않고 자유롭게 기록하세요.',
-        '중요한 것은 완성도가 아니라 기록하는 습관입니다.',
-      ],
+      descKo: '떠오르는 생각을 형식에 얽매이지 않고 자유롭게 기록하세요. 중요한 것은 완성도가 아니라 기록하는 습관입니다.',
       img: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600&h=700&fit=crop',
     },
     {
       num: '02',
       title: 'Refine',
       descEn: 'Highlight what truly matters.',
-      descKoLines: [
-        '메모를 다시 읽으며 불필요한 내용을 덜어내고,',
-        '핵심 문장과 키워드를 남겨 생각을 명확하게 정리합니다.',
-      ],
+      descKo: '메모를 다시 읽으며 불필요한 내용을 덜어내고, 핵심 문장과 키워드를 남겨 생각을 명확하게 정리합니다.',
       img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=700&fit=crop',
     },
     {
       num: '03',
       title: 'Connect',
       descEn: 'Link ideas together.',
-      descKoLines: [
-        '정리한 메모를 다른 기록과 연결해',
-        '새로운 관계와 패턴을 발견합니다.',
-      ],
+      descKo: '정리한 메모를 다른 기록과 연결해 새로운 관계와 패턴을 발견합니다.',
       img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=700&fit=crop',
     },
     {
       num: '04',
       title: 'Rediscover',
       descEn: 'Return to forgotten thoughts.',
-      descKoLines: [
-        '시간이 지난 뒤 다시 메모를 꺼내보세요.',
-        '잊고 있던 생각이 새로운 아이디어와 통찰로 이어질 수 있습니다.',
-      ],
+      descKo: '시간이 지난 뒤 다시 메모를 꺼내보세요. 잊고 있던 생각이 새로운 아이디어와 통찰로 이어질 수 있습니다.',
       img: 'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=600&h=700&fit=crop',
     },
   ];
@@ -93,12 +81,7 @@ export default function HowItWorksSection() {
                   margin: '18px 0 0 0',
                   lineHeight: 1.65,
                 }}>
-                  {s.descKoLines.map((line, idx) => (
-                    <React.Fragment key={idx}>
-                      {line}
-                      {idx < s.descKoLines.length - 1 && <br />}
-                    </React.Fragment>
-                  ))}
+                  {s.descKo}
                 </p>
               </div>
             </div>
