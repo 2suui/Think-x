@@ -1,138 +1,86 @@
 import React from 'react';
 
 export default function HowItWorksSection() {
-  const steps = [
+  const STEPS = [
     {
       num: '01',
       title: 'Capture',
-      body: 'Begin with the Capture Page — a structured space for thoughts, sketches, questions, and observations. No format enforced, just intention.',
+      descEn: 'Write freely without worrying about perfection.',
+      descKoLines: [
+        '떠오르는 생각을 형식에 얽매이지 않고 자유롭게 기록하세요.',
+        '중요한 것은 완성도가 아니라 기록하는 습관입니다.',
+      ],
       img: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600&h=700&fit=crop',
     },
     {
       num: '02',
-      title: 'Keyword & Index',
-      body: 'Surface what matters by tagging each entry with keywords. The index at the front becomes a map of your own mind.',
+      title: 'Refine',
+      descEn: 'Highlight what truly matters.',
+      descKoLines: [
+        '메모를 다시 읽으며 불필요한 내용을 덜어내고,',
+        '핵심 문장과 키워드를 남겨 생각을 명확하게 정리합니다.',
+      ],
       img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=700&fit=crop',
     },
     {
       num: '03',
-      title: 'Connect & Archive',
-      body: 'Use the Connection Space to draw links across entries. Rediscover ideas in the Archive and watch understanding deepen over time.',
+      title: 'Connect',
+      descEn: 'Link ideas together.',
+      descKoLines: [
+        '정리한 메모를 다른 기록과 연결해',
+        '새로운 관계와 패턴을 발견합니다.',
+      ],
       img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=700&fit=crop',
+    },
+    {
+      num: '04',
+      title: 'Rediscover',
+      descEn: 'Return to forgotten thoughts.',
+      descKoLines: [
+        '시간이 지난 뒤 다시 메모를 꺼내보세요.',
+        '잊고 있던 생각이 새로운 아이디어와 통찰로 이어질 수 있습니다.',
+      ],
+      img: 'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=600&h=700&fit=crop',
     },
   ];
 
   return (
-    <section
-      id="how-it-works"
-      style={{
-        padding: 'clamp(80px,10vw,140px) clamp(24px,5vw,120px)',
-        maxWidth: '1280px',
-        margin: '0 auto',
-      }}
-    >
+    <section id="how-it-works" className="section-wrapper">
       <div className="fade-in visible" style={{ marginBottom: '72px' }}>
-        <p
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontStyle: 'italic',
-            fontSize: '0.95rem',
-            color: 'var(--color-brand-yellow)',
-            letterSpacing: '0.08em',
-            marginBottom: '16px',
-            textTransform: 'uppercase',
-          }}
-        >
-          How it Works
-        </p>
-        <h2
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontWeight: 300,
-            fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
-            lineHeight: 1.2,
-            color: 'var(--color-ink)',
-          }}
-        >
-          Three stages.
+        <div>
+          <span className="section-tag-yellow" style={{ marginBottom: '16px' }}>
+            How to use
+          </span>
+        </div>
+        <h2 className="section-heading-lg">
+          Four stages.
           <br />
-          <em style={{ fontStyle: 'italic', color: 'var(--color-brand-blue)' }}>One continuous loop.</em>
+          <em>One continuous loop.</em>
         </h2>
       </div>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '32px',
-        }}
-      >
-        {steps.map((step) => (
-          <div
-            key={step.num}
-            style={{ display: 'flex', flexDirection: 'column' }}
-          >
-            <div
-              style={{
-                aspectRatio: '5/6',
-                overflow: 'hidden',
-                background: 'var(--color-surface)',
-                borderRadius: '2px',
-                marginBottom: '24px',
-                border: '1px solid var(--color-rule)',
-              }}
-            >
-              <img
-                src={step.img}
-                alt={step.title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block',
-                  transition: 'transform 0.7s ease',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-              />
+      <div className="steps-grid">
+        {STEPS.map((s, i) => (
+          <div key={s.num} className={`step-card fade-in fade-in-delay-${i + 1}`}>
+            <div className="step-img-box">
+              <img src={s.img} alt={s.title} className="step-img" loading="lazy" />
             </div>
-            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-              <span
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontStyle: 'italic',
-                  fontSize: '0.95rem',
-                  fontWeight: 600,
-                  color: 'var(--color-brand-yellow)',
-                  marginTop: '4px',
-                  minWidth: '28px',
-                }}
-              >
-                {step.num}
-              </span>
+            <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+              <span className="step-badge">{s.num}</span>
               <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 500,
-                    fontSize: '1.35rem',
-                    color: 'var(--color-ink)',
-                    marginBottom: '10px',
-                    margin: 0,
-                  }}
-                >
-                  {step.title}
+                <h3 style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '6px' }}>
+                  {s.title}
                 </h3>
-                <p
-                  style={{
-                    fontSize: '0.875rem',
-                    color: 'var(--color-ink-secondary)',
-                    lineHeight: 1.75,
-                    fontWeight: 300,
-                    marginTop: '8px',
-                  }}
-                >
-                  {step.body}
+                <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', fontWeight: 600, margin: '0 0 8px', lineHeight: 1.5 }}>
+                  {s.descEn}
+                </p>
+                <p style={{ fontSize: '0.825rem', color: '#888888', fontWeight: 400, margin: 0, lineHeight: 1.6 }}>
+                  {s.descKoLines.map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      {idx < s.descKoLines.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
             </div>

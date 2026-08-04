@@ -340,20 +340,42 @@ function HowItWorks() {
     {
       num: '01',
       title: 'Capture',
-      body: 'Begin with the Capture Page — a structured space for thoughts, sketches, questions, and observations. No format enforced, just intention.',
+      descEn: 'Write freely without worrying about perfection.',
+      descKoLines: [
+        '떠오르는 생각을 형식에 얽매이지 않고 자유롭게 기록하세요.',
+        '중요한 것은 완성도가 아니라 기록하는 습관입니다.',
+      ],
       img: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=600&h=700&fit=crop',
     },
     {
       num: '02',
-      title: 'Keyword & Index',
-      body: 'Surface what matters by tagging each entry with keywords. The index at the front becomes a map of your own mind.',
+      title: 'Refine',
+      descEn: 'Highlight what truly matters.',
+      descKoLines: [
+        '메모를 다시 읽으며 불필요한 내용을 덜어내고,',
+        '핵심 문장과 키워드를 남겨 생각을 명확하게 정리합니다.',
+      ],
       img: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=700&fit=crop',
     },
     {
       num: '03',
-      title: 'Connect & Archive',
-      body: 'Use the Connection Space to draw links across entries. Rediscover ideas in the Archive and watch understanding deepen over time.',
+      title: 'Connect',
+      descEn: 'Link ideas together.',
+      descKoLines: [
+        '정리한 메모를 다른 기록과 연결해',
+        '새로운 관계와 패턴을 발견합니다.',
+      ],
       img: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=700&fit=crop',
+    },
+    {
+      num: '04',
+      title: 'Rediscover',
+      descEn: 'Return to forgotten thoughts.',
+      descKoLines: [
+        '시간이 지난 뒤 다시 메모를 꺼내보세요.',
+        '잊고 있던 생각이 새로운 아이디어와 통찰로 이어질 수 있습니다.',
+      ],
+      img: 'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=600&h=700&fit=crop',
     },
   ];
 
@@ -364,7 +386,7 @@ function HowItWorks() {
           <SectionTag text="How to use" style={{ marginBottom: '16px' }} />
         </div>
         <h2 className="section-heading-lg">
-          Three stages.
+          Four stages.
           <br />
           <em>One continuous loop.</em>
         </h2>
@@ -376,14 +398,22 @@ function HowItWorks() {
             <div className="step-img-box">
               <img src={s.img} alt={s.title} className="step-img" loading="lazy" />
             </div>
-            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+            <div style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
               <span className="step-badge">{s.num}</span>
               <div>
-                <h3 style={{ fontWeight: 700, fontSize: '1.35rem', color: 'var(--color-ink)', marginBottom: '10px' }}>
+                <h3 style={{ fontWeight: 700, fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '6px' }}>
                   {s.title}
                 </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-secondary)', lineHeight: 1.75, fontWeight: 500, margin: 0 }}>
-                  {s.body}
+                <p style={{ fontSize: '0.875rem', color: 'var(--color-ink-secondary)', fontWeight: 600, margin: '0 0 8px', lineHeight: 1.5 }}>
+                  {s.descEn}
+                </p>
+                <p style={{ fontSize: '0.825rem', color: '#888888', fontWeight: 400, margin: 0, lineHeight: 1.6 }}>
+                  {s.descKoLines.map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      {idx < s.descKoLines.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
                 </p>
               </div>
             </div>

@@ -464,10 +464,10 @@ body {
   color: var(--color-ink);
 }
 
-/* How It Works Section */
+/* How It Works Section - 4 Steps Grid */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
 }
 
@@ -481,7 +481,7 @@ body {
   overflow: hidden;
   background: var(--color-surface);
   border-radius: 2px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .step-img {
@@ -503,10 +503,11 @@ body {
   color: var(--color-ink);
   padding: 4px 8px;
   border-radius: 2px;
-  margin-top: 4px;
+  margin-top: 3px;
   min-width: 28px;
   text-align: center;
   letter-spacing: 0.01em;
+  flex-shrink: 0;
 }
 
 /* Product Features Split */
@@ -783,6 +784,9 @@ body {
   .mobile-menu-toggle {
     display: none !important;
   }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 /* 3. Mobile: <= 767px → Mobile layout with drawer toggle */
@@ -832,6 +836,9 @@ body {
   .demo-video-wrapper {
     padding-top: 56px !important;
     padding-bottom: 56px !important;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr !important;
   }
   .why-cards-grid {
     grid-template-columns: 1fr !important;
