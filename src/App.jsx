@@ -305,12 +305,14 @@ function Philosophy() {
               It evolved into X—a symbol of connection and new perspectives.
             </em>
           </h2>
-          <p className="philosophy-subtext-ko" style={{ maxWidth: '820px', margin: '0 auto' }}>
-            Think X는 'Thinking Box'라는 아이디어에서 시작되었습니다.
+          <p className="philosophy-subtext-ko" style={{ maxWidth: '840px', margin: '0 auto' }}>
+            <strong style={{ color: 'var(--color-ink)', fontWeight: 700 }}>Think X는 'Thinking Box'라는 아이디어에서 시작되었습니다.</strong>
             <br />
-            생각을 담아두고, 다시 꺼내 보며, 새로운 의미를 발견하는 공간.
+            생각을 담아두고, 다시 꺼내 보며, 새로운 의미를 발견하는 공간을 만들고자 했습니다.
             <br />
-            그 상자는 시간이 지나며 X로 발전했습니다. X는 연결, 가능성, 그리고 아직 발견되지 않은 생각을 상징합니다.
+            시간이 지나며 단순한 기록을 넘어, 생각을 연결하고 이해하는 시스템으로 발전했습니다.
+            <br />
+            그래서 <strong style={{ color: 'var(--color-ink)', fontWeight: 700 }}>X</strong>는 생각이 교차하고, 연결되며, 새로운 가능성이 시작되는 지점을 상징합니다.
           </p>
         </div>
 
