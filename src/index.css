@@ -237,7 +237,7 @@ body {
 .hero-title {
   font-weight: 700;
   font-size: clamp(2.5rem, 4.8vw, 4.4rem);
-  line-height: 1.28;
+  line-height: 1.42;
   letter-spacing: 0em;
   color: var(--color-ink);
   margin-top: 0;
@@ -304,7 +304,7 @@ body {
 .section-heading-lg {
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 3.2rem);
-  line-height: 1.2;
+  line-height: 1.38;
   color: var(--color-ink);
   max-width: 700px;
   margin-bottom: 24px;
