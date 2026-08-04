@@ -162,9 +162,7 @@ function Hero() {
           Think X is a notebook system designed to capture, organize, and rediscover your thoughts — transforming simple notes into meaningful ideas and deeper understanding.
         </p>
         <p className="hero-desc-ko">
-          Think X는 생각을 기록하고, 정리하고, 다시 발견하는 과정을 돕는 노트 시스템입니다.
-        </p>
-        <p className="hero-desc-ko">
+          Think X는 생각을 기록하고, 정리하고, 다시 발견하는 과정을 돕는 노트 시스템입니다.<br />
           단순한 메모를 넘어 의미 있는 아이디어와 깊은 이해로 연결합니다.
         </p>
         <div className="hero-buttons">
