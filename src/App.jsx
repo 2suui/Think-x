@@ -28,7 +28,7 @@ function useFadeIn() {
 const NAV_LINKS = [
   { name: 'What is Think X', href: '#why' },
   { name: 'Behind the X', href: '#philosophy' },
-  { name: 'Think X Principles', href: '#philosophy' },
+  { name: 'Think X Principles', href: '#features' },
   { name: 'Inside Think X', href: '#product' },
   { name: 'How to use', href: '#how-it-works' },
 ];
@@ -164,7 +164,7 @@ function WhyThinkX() {
     <section id="why" className="section-wrapper">
       <div ref={headRef} className="fade-in" style={{ marginBottom: '72px' }}>
         <div>
-          <SectionTag text="Why Think X?" style={{ marginBottom: '48px' }} />
+          <SectionTag text="What is Think X" style={{ marginBottom: '48px' }} />
         </div>
         <h2 className="section-heading-lg" style={{ marginBottom: '64px' }}>
           We capture countless thoughts.
@@ -225,7 +225,7 @@ function Philosophy() {
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div>
-            <SectionTag text="Philosophy" style={{ marginBottom: '16px' }} />
+            <SectionTag text="Behind the X" style={{ marginBottom: '16px' }} />
           </div>
           <h2 className="section-heading-lg" style={{ margin: '0 auto 24px' }}>
             Think X designs the <em>way you meet your thoughts again</em> — not just the way you record them.
@@ -280,7 +280,7 @@ function HowItWorks() {
     <section id="how-it-works" className="section-wrapper">
       <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
         <div>
-          <SectionTag text="How it Works" style={{ marginBottom: '16px' }} />
+          <SectionTag text="How to use" style={{ marginBottom: '16px' }} />
         </div>
         <h2 className="section-heading-lg">
           Three stages.
@@ -325,11 +325,11 @@ function ProductFeatures() {
   ];
 
   return (
-    <section className="features-split-wrapper">
+    <section id="features" className="features-split-wrapper">
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
           <div>
-            <SectionTag text="Product Features" style={{ marginBottom: '16px' }} />
+            <SectionTag text="Think X Principles" style={{ marginBottom: '16px' }} />
           </div>
           <h2 className="section-heading-lg">
             Built around
@@ -376,7 +376,7 @@ function ProductDetail() {
     <section id="product" className="section-wrapper">
       <div ref={ref} className="fade-in" style={{ marginBottom: '64px' }}>
         <div>
-          <SectionTag text="Product Detail" style={{ marginBottom: '16px' }} />
+          <SectionTag text="Inside Think X" style={{ marginBottom: '16px' }} />
         </div>
         <h2 className="section-heading-lg">Inside the pages.</h2>
       </div>
@@ -528,7 +528,7 @@ function Footer() {
   const FOOTER_NAV = [
     { label: 'What is Think X', href: '#why' },
     { label: 'Behind the X', href: '#philosophy' },
-    { label: 'Think X Principles', href: '#philosophy' },
+    { label: 'Think X Principles', href: '#features' },
     { label: 'Inside Think X', href: '#product' },
     { label: 'How to use', href: '#how-it-works' },
   ];
