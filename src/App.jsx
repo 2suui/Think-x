@@ -241,7 +241,7 @@ function Philosophy() {
 
   return (
     <section id="philosophy" className="philosophy-section">
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <div className="philosophy-inner-container">
         <div ref={ref} className="fade-in" style={{ textAlign: 'center', marginBottom: '72px' }}>
           <div>
             <SectionTag text="Behind the X" style={{ marginBottom: '48px' }} />
@@ -464,7 +464,7 @@ function UseCases() {
 
   return (
     <section className="philosophy-section">
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+      <div className="philosophy-inner-container">
         <div ref={ref} className="fade-in" style={{ marginBottom: '72px' }}>
           <div>
             <SectionTag text="Use Cases" style={{ marginBottom: '16px' }} />
