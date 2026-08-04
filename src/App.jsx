@@ -154,10 +154,26 @@ function WhyThinkX() {
   const gridRef = useFadeIn();
 
   const REASONS = [
-    { label: 'Capture', desc: 'Every thought has a place. Structured pages guide you from raw ideas to refined insights.' },
-    { label: 'Index', desc: 'Keywords surface what matters. Never lose a thread buried in pages again.' },
-    { label: 'Connect', desc: "A dedicated space links ideas across entries, revealing patterns you'd never spot otherwise." },
-    { label: 'Archive', desc: 'Revisit and rediscover. The archive turns your notebook into a living knowledge base.' },
+    {
+      label: 'Capture',
+      descEn: 'Write without interruption.',
+      descKo: '떠오르는 생각을 부담 없이 기록합니다.',
+    },
+    {
+      label: 'Revisit',
+      descEn: 'Come back to your notes.',
+      descKo: '잊힌 메모를 다시 꺼내어 읽습니다.',
+    },
+    {
+      label: 'Select',
+      descEn: 'Find what truly matters.',
+      descKo: '중요한 생각을 선별하고 정리합니다.',
+    },
+    {
+      label: 'Understand',
+      descEn: 'Turn notes into insights.',
+      descKo: '흩어진 기록을 연결해 의미 있는 통찰로 발전시킵니다.',
+    },
   ];
 
   return (
@@ -190,7 +206,10 @@ function WhyThinkX() {
           <div key={r.label} className={`why-card fade-in fade-in-delay-${i + 1}`}>
             <div className="why-badge-num">0{i + 1}</div>
             <h3 className="why-card-title">{r.label}</h3>
-            <p className="why-card-desc">{r.desc}</p>
+            <div>
+              <p className="why-card-desc">{r.descEn}</p>
+              <p className="why-card-desc-ko">{r.descKo}</p>
+            </div>
           </div>
         ))}
       </div>

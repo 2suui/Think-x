@@ -4,19 +4,23 @@ export default function WhySection() {
   const steps = [
     {
       label: 'Capture',
-      desc: 'Every thought has a place. Structured pages guide you from raw ideas to refined insights without friction.',
+      descEn: 'Write without interruption.',
+      descKo: '떠오르는 생각을 부담 없이 기록합니다.',
     },
     {
-      label: 'Index',
-      desc: 'Keywords surface what matters. Never lose a thread buried in pages again with the front-of-book index.',
+      label: 'Revisit',
+      descEn: 'Come back to your notes.',
+      descKo: '잊힌 메모를 다시 꺼내어 읽습니다.',
     },
     {
-      label: 'Connect',
-      desc: 'A dedicated space links ideas across entries, revealing patterns and synthesis you would never spot otherwise.',
+      label: 'Select',
+      descEn: 'Find what truly matters.',
+      descKo: '중요한 생각을 선별하고 정리합니다.',
     },
     {
-      label: 'Archive',
-      desc: 'Revisit and rediscover. The archive turns your notebook from a linear record into a living knowledge base.',
+      label: 'Understand',
+      descEn: 'Turn notes into insights.',
+      descKo: '흩어진 기록을 연결해 의미 있는 통찰로 발전시킵니다.',
     },
   ];
 
@@ -41,7 +45,7 @@ export default function WhySection() {
             textTransform: 'uppercase',
           }}
         >
-          Why Think X?
+          What is Think X
         </p>
         <h2
           style={{
@@ -135,17 +139,10 @@ export default function WhySection() {
             >
               {item.label}
             </h3>
-            <p
-              style={{
-                fontSize: '0.875rem',
-                color: 'var(--color-ink-secondary)',
-                lineHeight: 1.7,
-                margin: 0,
-                fontWeight: 300,
-              }}
-            >
-              {item.desc}
-            </p>
+            <div>
+              <p className="why-card-desc">{item.descEn}</p>
+              <p className="why-card-desc-ko">{item.descKo}</p>
+            </div>
           </div>
         ))}
       </div>
